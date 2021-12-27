@@ -1,0 +1,599 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ex",
+				"Exception"
+			],
+			[
+				"cre",
+				"CreatedDTTM"
+			],
+			[
+				"Iden",
+				"Identity()"
+			],
+			[
+				"I",
+				"Identity"
+			],
+			[
+				"Bab",
+				"BlabberApp.sln"
+			],
+			[
+				"N",
+				"GetName"
+			],
+			[
+				"cont",
+				"continue"
+			],
+			[
+				"github",
+				"github.Stringify"
+			],
+			[
+				"D",
+				"Delete"
+			],
+			[
+				"delte",
+				"deleteRepos"
+			],
+			[
+				"int",
+				"internal"
+			],
+			[
+				"L",
+				"ListByOrg"
+			],
+			[
+				"Re",
+				"Repositories"
+			],
+			[
+				"New",
+				"NewClient"
+			],
+			[
+				"P",
+				"Pass"
+			],
+			[
+				"Head",
+				"Header.Get(\"Content-Type\"); s != c.contentType"
+			],
+			[
+				"Stat",
+				"StatusCode"
+			],
+			[
+				"Ss",
+				"statusCode"
+			],
+			[
+				"RE",
+				"REPO_OWNER"
+			],
+			[
+				"WEB",
+				"WEB_OBSERVER"
+			],
+			[
+				"dbs",
+				"dbs67"
+			],
+			[
+				"content",
+				"contentType"
+			],
+			[
+				"stat",
+				"statusCode"
+			],
+			[
+				"ser",
+				"server = viper.GetString(\""
+			],
+			[
+				"con",
+				"contentType"
+			],
+			[
+				"def",
+				"defaultTick"
+			],
+			[
+				"tim",
+				"time.Second"
+			],
+			[
+				"env",
+				"environment"
+			],
+			[
+				"pl",
+				"pflag"
+			],
+			[
+				"ver",
+				"verbose"
+			],
+			[
+				"Boo",
+				"BoolVar(&"
+			],
+			[
+				"scrip",
+				"script_includes"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/ShellScript/ShellScript.sublime-build",
+					""
+				],
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Markdown.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MarkdownPreview/Markdown.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ipsu",
+				"LoremIpsum: (15) some"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"snippet: ip",
+				"Snippet: doc_params"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"termin",
+				"Terminal: Open"
+			],
+			[
+				"term",
+				"Go: Open Terminal"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Term",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"l",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"for",
+				"GoTools: Format"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"go",
+				"Go: source"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"snippet",
+				"Snippet: authentication"
+			],
+			[
+				"markdown:",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"snip",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"List",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Local Dependency"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 137.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities"
+	],
+	"file_history":
+	[
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/UserTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/BlabTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemoryRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IBlabRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/DataStore.csproj",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/UserAdapterExceptions.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IUserRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/BlabAdapterExceptions.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/Blab.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw02/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/User.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IDomainEntity.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IValueObject.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Domain.csproj",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Identity.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Domain.UnitTest.csproj",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Client.csproj",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/BlabberApp.sln",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain.UnitTest/Common/IdentityTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain/Common/Identity.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain/Entities/Blab.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain/Entities/User.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain/Class1.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain/Interfaces/IID.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/BlabberApp.sublime-project",
+		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/User/Terminal.sublime-settings",
+		"/Users/stringhamdb/Documents/GitHub/daoyinchuan.github.io/content/links.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/.gitignore",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/README.md",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/Makefile",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/cmd/list.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/cmd/delete.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/ghutil.toml",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/internal/config.go",
+		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/Terminal/Terminal.sublime-settings",
+		"/usr/local/bin/iTerm.sh",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/repo.txt",
+		"/Users/stringhamdb/go/pkg/mod/github.com/google/go-github/v41@v41.0.0/github/github.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/internal/repos.go",
+		"/Users/stringhamdb/Documents/Weber State/tools/repos.txt",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw01/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/hw01/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/.gitignore",
+		"/Users/stringhamdb/.vimrc",
+		"/Users/stringhamdb/.gvimrc",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/observer.conf",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/main.go",
+		"/usr/local/bin/mvim",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/internal/conf/configure.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/observer.toml",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/cmd/conf.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/Makefile",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/cmd/version.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/internal/ver/version.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/internal/bld/build.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/cmd/root.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/src/conf/configure.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/pkg/conf/configure.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/go.mod",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/bld/build.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/.gitignore",
+		"/Users/stringhamdb/go/src/github.com/dbs67/observer/README.md",
+		"/Users/stringhamdb/sn-filesync/personal.json",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/urlfetcher.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/fetcher.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/cmd/crawl.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/collyfetcher.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/item/memrepo.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/item/mysqlrepo.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/collyfetcher_test.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/mockfetcher.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/adapter/item/memrepo_test.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/cmd/version.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/pkg/port/itemservice.go",
+		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/main.go",
+		"/Users/stringhamdb/go/src/github.com/donbstringham/assignment-05-donbstringham/cmd/crawl.go",
+		"/Users/stringhamdb/go/src/github.com/donbstringham/assignment-05-donbstringham/main.go",
+		"/Users/stringhamdb/.zshenv",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/.env",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/port/itemservice.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/collyfetcher.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/item/memrepo.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/item/memrepo_test.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/item/mysqlrepo.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/item/mysqlrepo_test.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/collyfetcher_test.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/fetcher.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/mockfetcher.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/mockfetcher_test.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/urlfetcher.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/urlfetcher_test.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/cmd/version.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/cmd/crawl.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/main.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/cmd/root.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/go.mod",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/Makefile",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/.gitignore",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/.gitattributes",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/domain/item/item.go",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/pkg/domain/item/.zshenv",
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/pkg/domain/item/item.go",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/scope_Global/client_false/FindMidServerByCapability.js",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/scope_Global/client_false/ITOMSpokeUtils.js",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/reload.sh",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/init.sh",
+		"/Users/stringhamdb/sn-filesync/ldsdev.json",
+		"/Users/stringhamdb/README.md",
+		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/User/Markdown.sublime-build",
+		"/Users/stringhamdb/.profile",
+		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/User/Marked 2.sublime-build",
+		"/Users/stringhamdb/.config/zsh/zshrc.zsh",
+		"/Users/stringhamdb/.config/zsh/config.zsh",
+		"/Users/stringhamdb/.zshrc",
+		"/Users/stringhamdb/.config/zsh/aliases.zsh",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/scope_Global/client_false/SplunkCubsTidalImport.js",
+		"/Users/stringhamdb/sn-filesync/reload.sh",
+		"/Users/stringhamdb/sn-filesync/init.sh",
+		"/Users/stringhamdb/.config/zsh/zsh_history",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/ICS.url",
+		"/Users/stringhamdb/Downloads/sn-filesync/app.config.json",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/scope_Global/client_false/ScorchWS.js",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/Transform.js",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/JSUtil.js",
+		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/now-workspace/ldsdev/sys_script_include/getMyItems.js"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 112.0,
+		"where_history":
+		[
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"this.buffer",
+			"IEntity"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"this.Buffer",
+			"IDomainEntity"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 526.0
+	},
+	"output.exec":
+	{
+		"height": 146.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.gotools_syntax_errors":
+	{
+		"height": 146.0
+	},
+	"output.language servers":
+	{
+		"height": 146.0
+	},
+	"output.markdown":
+	{
+		"height": 146.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 150.0
+	},
+	"pinned_build_system": "Packages/User/Marked 2.sublime-build",
+	"project": "BlabberApp.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_last_char_search": "D",
+		"_vintageous_last_char_search_command": "vi_big_f",
+		"_vintageous_reset_during_init": true
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
