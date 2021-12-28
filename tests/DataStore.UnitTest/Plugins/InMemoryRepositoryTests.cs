@@ -1,4 +1,5 @@
 using BlabberApp.DataStore.Plugins;
+using BlabberApp.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BlabberApp.DataStore.UnitTests.Plugins;
@@ -7,7 +8,7 @@ namespace BlabberApp.DataStore.UnitTests.Plugins;
 public class InMemoryRepositoryTests
 {
     [TestMethod]
-    public void NewInMemoryRepositoryShouldInstantiateCorrectly()
+    public void InMemoryRepository_TypeCheck()
     {
         // Arrange
         var e = new InMemoryRepository();
@@ -15,5 +16,19 @@ public class InMemoryRepositoryTests
         var a = new InMemoryRepository();
         // Assert
         Assert.IsInstanceOfType(e, a.GetType(), "NOT same types");
+    }
+
+    [TestMethod]
+    public void InMemoryRepository_Add_Count()
+    {
+        // Arrange
+        var h = new InMemoryRepository();
+        var e = 1;
+        var u = new User("foobar", "foobar@example.com");
+        // Act
+        h.Create(u);
+        var a = h.Count();
+        // Assert
+        Assert.AreEqual(e, a);
     }
 }

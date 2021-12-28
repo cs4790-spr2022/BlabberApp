@@ -13,6 +13,11 @@ public class InMemoryRepository : IRepository, IBlabRepository, IUserRepository
         this.Buffer = new ArrayList();
     }
 
+    public int Count()
+    {
+        return this.Buffer.Count;
+    }
+
     public void Create(IDomainEntity obj)
     {
         this.Buffer.Add(obj);
@@ -48,7 +53,7 @@ public class InMemoryRepository : IRepository, IBlabRepository, IUserRepository
         this.Buffer.Clear();
     }
 
-    public IDomainEntity GetBlabByUser(User usr) {throw new NotImplementedException();}
-    public IEnumerable GetBlabsByDateTime(DateTime Dttm) {throw new NotImplementedException();}
-    public IDomainEntity GetByEmail(string email) {throw new NotImplementedException();}
+    public IDomainEntity GetBlabByUser(User usr) { throw new NotImplementedException(); }
+    public IEnumerable GetBlabsByDateTime(DateTime Dttm) { throw new NotImplementedException(); }
+    public IDomainEntity GetByEmail(string email) { throw new NotImplementedException(); }
 }
