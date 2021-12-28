@@ -29,4 +29,7 @@ obj/
 # Support for Project snippet scope
 !.vscode/*.code-snippets
 
+# Sublime Text files
+*.sublime*
+
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,visualstudiocode
