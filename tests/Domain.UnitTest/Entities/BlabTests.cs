@@ -1,11 +1,12 @@
 using BlabberApp.Domain.Entities;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BlabberApp.Domain.UnitTests.Entities;
 
+[TestClass]
 public class BlabTests
 {
-    [Test]
+    [TestMethod]
     public void NewBlabShouldReturnCorrectValues()
     {
         // Arrange
@@ -14,8 +15,8 @@ public class BlabTests
         // Act
         var a = new Blab("Lorem ipsum voluptate proident ut ut irure ex ex aliqua in esse non eiusmod adipisicing exercitation consequat in quis est.", u);
         // Assert
-        Assert.AreNotEqual(e.Id, a.Id);
-        Assert.AreEqual(e.User, a.User);
-        Assert.AreEqual(e.Content, a.Content);
+        Assert.AreNotEqual(e.Id, a.Id, "ID's are equal");
+        Assert.AreEqual(e.User, a.User, "User are NOT equal");
+        Assert.AreEqual(e.Content, a.Content, "Content is NOT equal");
     }
 }

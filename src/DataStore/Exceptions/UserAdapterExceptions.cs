@@ -1,8 +1,6 @@
-using System;
-
 namespace BlabberApp.DataStore.Exceptions;
 
-public class UserAdapterException : Exception
+public class UserAdapterException : SystemException
 {
     public UserAdapterException(string message) : base(message) {}
 }
