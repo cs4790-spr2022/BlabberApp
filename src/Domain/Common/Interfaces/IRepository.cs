@@ -1,13 +1,14 @@
 using System.Collections;
 
-namespace BlabberApp.Domain.Common.Interfaces;
-
-public interface IRepository
+namespace BlabberApp.Domain.Common.Interfaces
 {
-    void Create(IDomainEntity obj);
-    IEnumerable ReadAll();
-    IDomainEntity ReadById(Guid Id);
-    void Update(IDomainEntity obj);
-    void Delete(IDomainEntity obj);
-    void DeleteAll();
+    public interface IRepository
+    {
+        void Add(IEntity entity);
+        void Remove(IEntity entity);
+        void RemoveAll();
+        void Update(IEntity entity);
+        IEnumerable GetAll();
+        IEntity GetById(Guid Id);
+    }
 }

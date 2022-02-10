@@ -1,3 +1,8 @@
-namespace BlabberApp.Domain.Common.Interfaces;
+namespace BlabberApp.Domain.Common.Interfaces
+{
 
-public interface IValueObject {}
+    public interface IValueObject
+    {
+        public void Validate();
+    }
+}

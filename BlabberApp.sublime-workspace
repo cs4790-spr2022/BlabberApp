@@ -179,6 +179,167 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/DataStore/Plugins/InMemoryRepository.cs",
+			"settings":
+			{
+				"buffer_size": 1552,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"nv_vi_r",
+					{
+						"char": "{",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAI4AAAAAAAAAjwAAAAAAAAABAAAAOw",
+					"AQAAAAAAAAABAAAAjgAAAAAAAACOAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_o",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "}"
+								}
+							]
+						]
+					},
+					"AgAAABQGAAAAAAAAFQYAAAAAAAAAAAAAFQYAAAAAAAAWBgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEwYAAAAAAAATBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ";"
+								}
+							]
+						]
+					},
+					"AQAAACYBAAAAAAAAJwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJQEAAAAAAAAlAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					6,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"BgAAABABAAAAAAAAEAEAAAAAAAABAAAARBABAAAAAAAAEAEAAAAAAAABAAAAbxABAAAAAAAAEAEAAAAAAAABAAAAbRABAAAAAAAAEAEAAAAAAAABAAAAYRABAAAAAAAAEAEAAAAAAAABAAAAaRABAAAAAAAAEAEAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAAEAEAAAAAAAAQAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"nv_vi_r",
+					{
+						"char": "b",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAABgBAAAAAAAAGQEAAAAAAAABAAAAQg",
+					"AQAAAAAAAAABAAAAGAEAAAAAAAAYAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAB4BAAAAAAAAHgEAAAAAAAABAAAAWw",
+					"AQAAAAAAAAABAAAAHgEAAAAAAAAeAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAB4BAAAAAAAAHgEAAAAAAAABAAAAXQ",
+					"AQAAAAAAAAABAAAAHgEAAAAAAAAeAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					72,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAABYBAAAAAAAAFgEAAAAAAAABAAAAPw",
+					"AQAAAAAAAAABAAAAFgEAAAAAAAAWAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert_snippet",
+								{
+									"contents": "[$0]"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							]
+						]
+					},
+					"AQAAABYBAAAAAAAAGAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFgEAAAAAAAAWAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -344,35 +505,40 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp"
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins"
 	],
 	"file_history":
 	[
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/BlabAdapterExceptions.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/UserAdapterExceptions.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IEntity.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IValueObject.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Exceptions/GeneralExceptions.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IUserRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IBlabRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/User.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/Blab.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemoryRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IDomainEntity.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlBlabRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw03/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlPlugin.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IRepository.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IBlabRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/obj/Debug/net6.0/Domain.UnitTest.AssemblyInfo.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/Blab.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/DataStore.UnitTest.csproj",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/DbContexts/BlabberContextTests.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/DbContexts/BlabberContext.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/User.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/BlabAdapterExceptions.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/UserAdapterExceptions.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IUserRepository.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IDomainEntity.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw02/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw01/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/BlabberApp.sln",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/UserTests.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/BlabTests.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemoryRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/DataStore.csproj",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IValueObject.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Domain.csproj",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Identity.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Domain.UnitTest.csproj",
@@ -473,9 +639,7 @@
 		"/Users/stringhamdb/.config/zsh/zshrc.zsh",
 		"/Users/stringhamdb/.config/zsh/config.zsh",
 		"/Users/stringhamdb/.zshrc",
-		"/Users/stringhamdb/.config/zsh/aliases.zsh",
-		"/Users/stringhamdb/OneDrive - Church of Jesus Christ/Bitbucket/snow/script_includes/scope_Global/client_false/SplunkCubsTidalImport.js",
-		"/Users/stringhamdb/sn-filesync/reload.sh"
+		"/Users/stringhamdb/.config/zsh/aliases.zsh"
 	],
 	"find":
 	{
@@ -519,6 +683,136 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/DataStore/Plugins/InMemoryRepository.cs",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										279,
+										280
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										278,
+										279
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": false,
+							"git_gutter_is_enabled": true,
+							"highlight_line": true,
+							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemoryRepository.cs",
+							"oops":
+							{
+								"280,286": "Bad array declarator: To declare a managed array the rank specifier precedes the variable's identifier. To declare a fixed size buffer field, use the fixed keyword before the field type."
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -634,7 +928,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 283.0,
+	"side_bar_width": 270.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

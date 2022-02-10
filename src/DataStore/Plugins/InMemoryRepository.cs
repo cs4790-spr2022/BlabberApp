@@ -2,11 +2,12 @@ using BlabberApp.Domain.Common.Interfaces;
 using BlabberApp.Domain.Entities;
 using System.Collections;
 
-namespace BlabberApp.DataStore.Plugins;
+namespace BlabberApp.DataStore.Plugins{
 
 public class InMemoryRepository : IRepository, IBlabRepository, IUserRepository
 {
-    public ArrayList Buffer;
+    // public ArrayList Buffer;
+    private IEntity[] buffer;
 
     public InMemoryRepository()
     {
@@ -37,10 +38,17 @@ public class InMemoryRepository : IRepository, IBlabRepository, IUserRepository
         throw new Exception("Not found");
     }
 
-    public void Update(IDomainEntity obj)
+    // public void UpdateById(IDomainEntity obj)
+    public void UpdateById(IDomainEntity obj)
     {
-        this.Delete(obj);
-        this.Create(obj);
+        // TODO Validation of "obj"
+        try {
+            obj.Validate();
+            this.Delete(obj);
+            this.Create(obj);
+        } catch {
+            throw;
+        }
     }
 
     public void Delete(IDomainEntity obj)
@@ -56,4 +64,5 @@ public class InMemoryRepository : IRepository, IBlabRepository, IUserRepository
     public IDomainEntity GetBlabByUser(User usr) { throw new NotImplementedException(); }
     public IEnumerable GetBlabsByDateTime(DateTime Dttm) { throw new NotImplementedException(); }
     public IDomainEntity GetByEmail(string email) { throw new NotImplementedException(); }
+}
 }

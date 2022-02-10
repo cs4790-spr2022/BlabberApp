@@ -1,23 +1,33 @@
 using BlabberApp.Domain.Common.Interfaces;
 using System.Net.Mail;
 
-namespace BlabberApp.Domain.Entities;
-
-public class User : IDomainEntity
+namespace BlabberApp.Domain.Entities
 {
-    public DateTime lastloginDttm { get; }
-    public DateTime registeredDttm { get; }
-    public MailAddress Email { get; set; }
-    public Guid Id { get; set; }
-    public string Username { get; set; }
-    public virtual ICollection<Blab>? Blabs { get; set; }
 
-    public User(string username, string address)
+    public class User : BaseEntity
     {
-        this.lastloginDttm = this.registeredDttm;
-        this.registeredDttm = DateTime.UtcNow;
-        this.Email = new MailAddress(address);
-        this.Id = Guid.NewGuid();
-        this.Username = username;
+        public DateTime DttmLastLogin { get; set;}
+        public MailAddress Email { get; set; }
+        public string Username { get; set; }
+
+        public User(string username, string email)
+        {
+            this.DttmLastLogin = DateTime.Now;
+            this.Email = new MailAddress(email);
+            this.Username = username;
+        }
+
+        override public void AreEqual(IEntity blab)
+        {
+            throw new NotImplementedException();
+        }
+
+        override public void Validate()
+        {
+            // TODO is there an email
+            // TODO is email format valid
+            // TODO username exists
+            throw new NotImplementedException();
+        }
     }
 }
