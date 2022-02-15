@@ -2,13 +2,13 @@ using System.Collections;
 
 namespace BlabberApp.Domain.Common.Interfaces
 {
-    public interface IRepository
+    public interface IRepository<T>
     {
-        void Add(IEntity entity);
-        void Remove(IEntity entity);
-        void RemoveAll();
-        void Update(IEntity entity);
-        IEnumerable GetAll();
-        IEntity GetById(Guid Id);
+        public void Add(T entity);
+        public void Remove(T entity);
+        public void RemoveAll();
+        public void Update(T entity);
+        public IEnumerable<T> GetAll();
+        public T GetById(Guid Id);
     }
 }
