@@ -1,27 +1,29 @@
-namespace BlabberApp.DataStore.Plugins;
-
-public class MySqlPlugin
+namespace BlabberApp.DataStore.Plugins
 {
-    private MySql.Data.MySqlClient.MySqlConnection? conn;
-    private string connectionString;
 
-    public MySqlPlugin(string connStr)
+    public class MySqlPlugin
     {
-        this.connectionString = connStr;
-    }
+        private MySql.Data.MySqlClient.MySqlConnection? conn;
+        private string connectionString; //Also know as DSN
 
-    public void Connect()
-    {
-        try
+        public MySqlPlugin(string connStr)
         {
-            this.conn = new MySql.Data.MySqlClient.MySqlConnection(
-                this.connectionString
-            );
-            this.conn.Open();
+            this.connectionString = connStr;
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+
+        public void Connect()
         {
-            throw new Exception(ex.Message);
+            try
+            {
+                this.conn = new MySql.Data.MySqlClient.MySqlConnection(
+                    this.connectionString
+                );
+                this.conn.Open();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }
