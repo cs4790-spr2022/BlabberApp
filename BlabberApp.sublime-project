@@ -2,9 +2,9 @@
 	"folders":
 	[
 		{
-            "follow_symlinks": true,
-			"path": "."
-		}
+            /*"follow_symlinks": true,*/
+			"path": ".",
+		},
 	],
-    "solution_file": "./BlabberApp.sln"
+    "solution_file": "./BlabberApp.sln",
 }
