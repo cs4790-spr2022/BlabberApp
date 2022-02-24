@@ -5,6 +5,9 @@
             /*"follow_symlinks": true,*/
 			"path": ".",
 		},
+		{
+			"path": "/Users/stringhamdb/Documents/GitHub/cs4790-spr2022"
+		},
 	],
     "solution_file": "./BlabberApp.sln",
 }
