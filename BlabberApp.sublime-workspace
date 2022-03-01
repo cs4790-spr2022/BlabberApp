@@ -192,51 +192,311 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins/MySqlPluginTests.cs",
+			"file": "src/WebApi/Controllers/BlabsController.cs",
 			"settings":
 			{
-				"buffer_size": 912,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"buffer_size": 1054,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			},
 			"undo_stack":
 			[
 				[
-					20,
+					9,
 					1,
-					"nv_vi_dd",
+					"nv_vi_paste",
 					{
+						"before_cursor": false,
 						"count": 1,
 						"mode": "mode_internal_normal",
 						"register": "\""
 					},
-					"AQAAAPwCAAAAAAAA/AIAAAAAAAABAAAACg",
-					"AQAAAAAAAAABAAAA/AIAAAAAAAD8AgAAAAAAAAAAAAAAAPC/"
+					"AQAAAAAAAAAAAAAA8QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					28,
+					20,
 					1,
 					"nv_vi_x",
 					{
 						"count": 1,
-						"mode": "mode_internal_normal",
+						"mode": "mode_visual",
 						"register": "\""
 					},
-					"AQAAAHIAAAAAAAAAcgAAAAAAAAABAAAAOw",
-					"AQAAAAAAAAABAAAAcgAAAAAAAAByAAAAAAAAAAAAAAAAAPC/"
+					"AQAAAIIAAAAAAAAAggAAAAAAAAAPAAAAV2VhdGhlckZvcmVjYXN0",
+					"AQAAAAAAAAABAAAAggAAAAAAAACRAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					40,
+					33,
 					1,
 					"sequence",
 					{
 						"commands":
 						[
 							[
-								"nv_vi_a",
+								"insert",
+								{
+									"characters": "B"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "l"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "abs"
+								}
+							]
+						]
+					},
+					"BQAAAIIAAAAAAAAAgwAAAAAAAAAAAAAAgwAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIUAAAAAAAAAAAAAAIUAAAAAAAAAhgAAAAAAAAAAAAAAhgAAAAAAAACHAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggAAAAAAAACCAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					1,
+					"nv_vi_c",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"motion":
+						{
+							"motion": "nv_vi_select_text_object",
+							"motion_args":
+							{
+								"count": 1,
+								"inclusive": false,
+								"mode": "mode_internal_normal",
+								"text_object": "w"
+							}
+						},
+						"register": "\""
+					},
+					"AQAAAEcCAAAAAAAARwIAAAAAAAASAAAAR2V0V2VhdGhlckZvcmVjYXN0",
+					"AQAAAAAAAAABAAAATQIAAAAAAABNAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": "B"
+					},
+					"AQAAAEcCAAAAAAAASAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARwIAAAAAAABHAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": "labs"
+					},
+					"BAAAAEgCAAAAAAAASQIAAAAAAAAAAAAASQIAAAAAAABKAgAAAAAAAAAAAABKAgAAAAAAAEsCAAAAAAAAAAAAAEsCAAAAAAAATAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASAIAAAAAAABIAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					57,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_visual",
+						"register": "\""
+					},
+					"AQAAALYBAAAAAAAAtgEAAAAAAAAPAAAAV2VhdGhlckZvcmVjYXN0",
+					"AQAAAAAAAAABAAAAtgEAAAAAAADFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "B"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "labs"
+								}
+							]
+						]
+					},
+					"BQAAALYBAAAAAAAAtwEAAAAAAAAAAAAAtwEAAAAAAAC4AQAAAAAAAAAAAAC4AQAAAAAAALkBAAAAAAAAAAAAALkBAAAAAAAAugEAAAAAAAAAAAAAugEAAAAAAAC7AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtgEAAAAAAAC2AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_o",
 								{
 									"count": 1,
 									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "U"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "using"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " Bl"
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "B"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "lab"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ";"
+								}
+							]
+						]
+					},
+					"HAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAFUAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAACAAAAAAAAAAAAAAABgAAAAAAAAAGAAAAAAAAAAIAAABCbAYAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAARAAAAAAAAAAAAAAARAAAAAAAAABcAAAAAAAAAAAAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIgAAAAAAAAAAAAAAIgAAAAAAAAAjAAAAAAAAAAAAAAAjAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAJQAAAAAAAAAAAAAAJAAAAAAAAAAkAAAAAAAAAAEAAABiIwAAAAAAAAAjAAAAAAAAAAEAAABhIgAAAAAAAAAiAAAAAAAAAAEAAABsIQAAAAAAAAAhAAAAAAAAAAEAAABCIAAAAAAAAAAgAAAAAAAAAAEAAAAuIAAAAAAAAAAhAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADAAAAAAAAAAMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					136,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAABABAAAAAAAAFAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEAEAAAAAAAAQAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					168,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_i",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\t"
+								}
+							]
+						]
+					},
+					"AQAAAIMBAAAAAAAAhwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggEAAAAAAACCAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					196,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_o",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "USING"
 								}
 							],
 							[
@@ -246,9 +506,121 @@
 								}
 							],
 							[
-								"insert_snippet",
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
 								{
-									"contents": "{$0}"
+									"characters": "using"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " BL"
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ".Do"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "main."
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ";"
+								}
+							]
+						]
+					},
+					"IwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABgAAAAAAAAAAAAAABQAAAAAAAAAFAAAAAAAAAAEAAAAgBAAAAAAAAAAEAAAAAAAAAAEAAABHAwAAAAAAAAADAAAAAAAAAAEAAABOAgAAAAAAAAACAAAAAAAAAAEAAABJAQAAAAAAAAABAAAAAAAAAAEAAABTAAAAAAAAAAAAAAAAAAAAAAEAAABVAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAgAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAACAAAAQkwGAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEQAAAAAAAAAAAAAAEQAAAAAAAAASAAAAAAAAAAAAAAASAAAAAAAAABMAAAAAAAAAAAAAABMAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAVAAAAAAAAAAAAAAAVAAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAAB4AAAAAAAAAAAAAAB4AAAAAAAAAHwAAAAAAAAAAAAAAHwAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAACoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABwAAAAAAAAAHAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					218,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "R"
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "repo"
 								}
 							],
 							[
@@ -259,103 +631,45 @@
 								}
 							],
 							[
-								"left_delete",
+								"insert",
+								{
+									"characters": ";"
+								}
+							]
+						]
+					},
+					"CwAAAEQCAAAAAAAARQIAAAAAAAAAAAAARQIAAAAAAABGAgAAAAAAAAAAAABGAgAAAAAAAEcCAAAAAAAAAAAAAEYCAAAAAAAARgIAAAAAAAABAAAAUkYCAAAAAAAAVQIAAAAAAAAAAAAAVQIAAAAAAABWAgAAAAAAAAAAAABWAgAAAAAAAFcCAAAAAAAAAAAAAFcCAAAAAAAAWAIAAAAAAAAAAAAAWAIAAAAAAABZAgAAAAAAAAAAAABZAgAAAAAAAFoCAAAAAAAAAAAAAFsCAAAAAAAAXAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAIAAAAAAABEAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					241,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_o",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "private"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " read"
+								}
+							],
+							[
+								"insert_dimensions",
 								null
-							],
-							[
-								"insert",
-								{
-									"characters": "}"
-								}
-							]
-						]
-					},
-					"BAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB1AAAAAAAAAAAAAAB0AAAAAAAAAHQAAAAAAAAAAQAAAH39AgAAAAAAAP4CAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAcQAAAAAAAABxAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					49,
-					1,
-					"omni_sharp_format_document",
-					null,
-					"AQAAAAAAAAAAAAAAVgMAAAAAAAD+AgAAdXNpbmcgRGF0YVN0b3JlLlBsdWdpbnM7CnVzaW5nIE1pY3Jvc29mdC5WaXN1YWxTdHVkaW8uVGVzdFRvb2xzLlVuaXRUZXN0aW5nOwoKbmFtZXNwYWNlIERhdGFTdG9yZS5Vbml0VGVzdC5QbHVnaW5zIHsKW1Rlc3RDbGFzc10KcHVibGljIGNsYXNzIE15U3FsUGx1Z2luVGVzdHMKewogICAgW1Rlc3RNZXRob2RdCiAgICBwdWJsaWMgdm9pZCBNeVNxbFBsdWdpblRlc3RfSW5zdGF0bnRpYXRlKCkKICAgIHsKICAgICAgICAvLyBBcnJhbmdlCiAgICAgICAgc3RyaW5nIGRzbiA9ICJzZXJ2ZXI9MTQzLjExMC4xNTkuMTcwO3VpZD1jZWNpbGlhZGFybGV5O3B3ZD1sZXRtZWluO2RhdGFiYXNlPWJsYWJiZXIiOwogICAgICAgIE15U3FsUGx1Z2luIGUgPSBuZXcgTXlTcWxQbHVnaW4oZHNuKTsKICAgICAgICBNeVNxbFBsdWdpbiBhID0gbmV3IE15U3FsUGx1Z2luKGRzbik7CiAgICAgICAgLy8gQXNzZXJ0CiAgICAgICAgQXNzZXJ0LkFyZUVxdWFsKGUuVG9TdHJpbmcoKSwgYS5Ub1N0cmluZygpKTsKICAgICAgICBBc3NlcnQuSXNOb3ROdWxsKGEpOwogICAgfQoKICAgIFtUZXN0TWV0aG9kXQogICAgcHVibGljIHZvaWQgVGVzdENvbm5lY3QoKQogICAgewogICAgICAgIHN0cmluZyBkc24gPSAic2VydmVyPTE0My4xMTAuMTU5LjE3MDt1aWQ9Y2VjaWxpYWRhcmxleTtwd2Q9bGV0bWVpbjtkYXRhYmFzZT1ibGFiYmVyIjsKICAgICAgICBNeVNxbFBsdWdpbiBlID0gbmV3IE15U3FsUGx1Z2luKGRzbik7CiAgICAgICAgZS5Db25uZWN0KCk7CiAgICB9Cn0KfQ",
-					"AQAAAAAAAAABAAAA/QIAAAAAAAD9AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					69,
-					1,
-					"nv_vi_paste",
-					{
-						"before_cursor": true,
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
-					},
-					"AQAAAIACAAAAAAAAkAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAgAIAAAAAAACAAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					84,
-					1,
-					"sequence",
-					{
-						"commands":
-						[
-							[
-								"nv_vi_o",
-								{
-									"count": 1,
-									"mode": "mode_internal_normal"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "//"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": " Arra"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "nge"
-								}
-							]
-						]
-					},
-					"DAAAAKcCAAAAAAAAqAIAAAAAAAAAAAAAqAIAAAAAAAC0AgAAAAAAAAAAAAC0AgAAAAAAALUCAAAAAAAAAAAAALUCAAAAAAAAtgIAAAAAAAAAAAAAtgIAAAAAAAC3AgAAAAAAAAAAAAC3AgAAAAAAALgCAAAAAAAAAAAAALgCAAAAAAAAuQIAAAAAAAAAAAAAuQIAAAAAAAC6AgAAAAAAAAAAAAC6AgAAAAAAALsCAAAAAAAAAAAAALsCAAAAAAAAvAIAAAAAAAAAAAAAvAIAAAAAAAC9AgAAAAAAAAAAAAC9AgAAAAAAAL4CAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApgIAAAAAAACmAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					103,
-					1,
-					"sequence",
-					{
-						"commands":
-						[
-							[
-								"nv_vi_o",
-								{
-									"count": 1,
-									"mode": "mode_internal_normal"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "/"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "/"
-								}
 							],
 							[
 								"insert",
@@ -366,40 +680,326 @@
 							[
 								"insert",
 								{
-									"characters": "A"
+									"characters": "I"
 								}
 							],
 							[
 								"insert",
 								{
-									"characters": "c"
+									"characters": "B"
+								}
+							],
+							[
+								"insert_dimensions",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": " "
 								}
 							],
 							[
 								"insert",
 								{
-									"characters": "t"
+									"characters": "_"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "repo;"
 								}
 							]
 						]
 					},
-					"CAAAAFIDAAAAAAAAUwMAAAAAAAAAAAAAUwMAAAAAAABfAwAAAAAAAAAAAABfAwAAAAAAAGADAAAAAAAAAAAAAGADAAAAAAAAYQMAAAAAAAAAAAAAYQMAAAAAAABiAwAAAAAAAAAAAABiAwAAAAAAAGMDAAAAAAAAAAAAAGMDAAAAAAAAZAMAAAAAAAAAAAAAZAMAAAAAAABlAwAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAANgMAAAAAAAA2AwAAAAAAAAAAAAAAAPC/"
+					"HAAAAPoBAAAAAAAA+wEAAAAAAAAAAAAA+wEAAAAAAAADAgAAAAAAAAAAAAADAgAAAAAAAAQCAAAAAAAAAAAAAAQCAAAAAAAABQIAAAAAAAAAAAAABQIAAAAAAAAGAgAAAAAAAAAAAAAGAgAAAAAAAAcCAAAAAAAAAAAAAAcCAAAAAAAACAIAAAAAAAAAAAAACAIAAAAAAAAJAgAAAAAAAAAAAAAJAgAAAAAAAAoCAAAAAAAAAAAAAAoCAAAAAAAACwIAAAAAAAAAAAAACwIAAAAAAAAMAgAAAAAAAAAAAAAMAgAAAAAAAA0CAAAAAAAAAAAAAA0CAAAAAAAADgIAAAAAAAAAAAAADgIAAAAAAAAPAgAAAAAAAAAAAAALAgAAAAAAAAsCAAAAAAAABAAAAHJlYWQLAgAAAAAAABMCAAAAAAAAAAAAABMCAAAAAAAAFAIAAAAAAAAAAAAAFAIAAAAAAAAVAgAAAAAAAAAAAAAVAgAAAAAAABYCAAAAAAAAAAAAABQCAAAAAAAAFAIAAAAAAAACAAAASUIUAgAAAAAAACMCAAAAAAAAAAAAACMCAAAAAAAAJAIAAAAAAAAAAAAAJAIAAAAAAAAlAgAAAAAAAAAAAAAlAgAAAAAAACYCAAAAAAAAAAAAACYCAAAAAAAAJwIAAAAAAAAAAAAAJwIAAAAAAAAoAgAAAAAAAAAAAAAoAgAAAAAAACkCAAAAAAAAAAAAACkCAAAAAAAAKgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+QEAAAAAAAD5AQAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					109,
+					257,
 					1,
-					"nv_vi_big_d",
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_o",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "-"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "_"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "repo"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " ="
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " repo;"
+								}
+							]
+						]
+					},
+					"EQAAALQCAAAAAAAAtQIAAAAAAAAAAAAAtQIAAAAAAADBAgAAAAAAAAAAAADBAgAAAAAAAMICAAAAAAAAAAAAAMECAAAAAAAAwQIAAAAAAAABAAAALcECAAAAAAAAwgIAAAAAAAAAAAAAwgIAAAAAAADDAgAAAAAAAAAAAADDAgAAAAAAAMQCAAAAAAAAAAAAAMQCAAAAAAAAxQIAAAAAAAAAAAAAxQIAAAAAAADGAgAAAAAAAAAAAADGAgAAAAAAAMcCAAAAAAAAAAAAAMcCAAAAAAAAyAIAAAAAAAAAAAAAyAIAAAAAAADJAgAAAAAAAAAAAADJAgAAAAAAAMoCAAAAAAAAAAAAAMoCAAAAAAAAywIAAAAAAAAAAAAAywIAAAAAAADMAgAAAAAAAAAAAADMAgAAAAAAAM0CAAAAAAAAAAAAAM0CAAAAAAAAzgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAswIAAAAAAACzAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					286,
+					1,
+					"nv_vi_x",
 					{
 						"count": 1,
 						"mode": "mode_internal_normal",
 						"register": "\""
 					},
-					"AQAAAHMDAAAAAAAAcwMAAAAAAAALAAAALkNvbm5lY3QoKTs",
-					"AQAAAAAAAAABAAAAcwMAAAAAAABzAwAAAAAAAAAAAAAAAPC/"
+					"AQAAABcDAAAAAAAAFwMAAAAAAAABAAAAVw",
+					"AQAAAAAAAAABAAAAFwMAAAAAAAAXAwAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					129,
+					288,
+					12,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"DAAAABcDAAAAAAAAFwMAAAAAAAABAAAAZRcDAAAAAAAAFwMAAAAAAAABAAAAYRcDAAAAAAAAFwMAAAAAAAABAAAAdBcDAAAAAAAAFwMAAAAAAAABAAAAaBcDAAAAAAAAFwMAAAAAAAABAAAAZRcDAAAAAAAAFwMAAAAAAAABAAAAchcDAAAAAAAAFwMAAAAAAAABAAAARhcDAAAAAAAAFwMAAAAAAAABAAAAbxcDAAAAAAAAFwMAAAAAAAABAAAAchcDAAAAAAAAFwMAAAAAAAABAAAAZRcDAAAAAAAAFwMAAAAAAAABAAAAYxcDAAAAAAAAFwMAAAAAAAABAAAAYQ",
+					"AQAAAAAAAAABAAAAFwMAAAAAAAAXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					289,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAABcDAAAAAAAAFwMAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAFwMAAAAAAAAXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					302,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "B"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "l"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "a"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "b"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "s"
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"BgAAABcDAAAAAAAAGAMAAAAAAAAAAAAAGAMAAAAAAAAZAwAAAAAAAAAAAAAZAwAAAAAAABoDAAAAAAAAAAAAABoDAAAAAAAAGwMAAAAAAAAAAAAAGwMAAAAAAAAcAwAAAAAAAAAAAAAbAwAAAAAAABsDAAAAAAAAAQAAAHM",
+					"AQAAAAAAAAABAAAAFwMAAAAAAAAXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					306,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAABsDAAAAAAAAGwMAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAGwMAAAAAAAAbAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					327,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_visual_line",
+						"register": "\""
+					},
+					"AQAAAPYAAAAAAAAA9gAAAAAAAAC/AAAAICAgICAgICBwcml2YXRlIHN0YXRpYyByZWFkb25seSBzdHJpbmdbXSBTdW1tYXJpZXMgPSBuZXdbXQogICAgICAgIHsKICAgICAgICAgICAgIkZyZWV6aW5nIiwgIkJyYWNpbmciLCAiQ2hpbGx5IiwgIkNvb2wiLCAiTWlsZCIsICJXYXJtIiwgIkJhbG15IiwgIkhvdCIsICJTd2VsdGVyaW5nIiwgIlNjb3JjaGluZyIKICAgICAgICB9Owo",
+					"AQAAAAAAAAABAAAA9gAAAAAAAAC1AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					329,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAPYAAAAAAAAA9gAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAA9gAAAAAAAAD2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					340,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAI0AAAAAAAAAjQAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAjQAAAAAAAACNAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					349,
+					1,
+					"nv_vi_x",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAMoBAAAAAAAAygEAAAAAAAABAAAAOw",
+					"AQAAAAAAAAABAAAAygEAAAAAAADKAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					371,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BwAAAJwDAAAAAAAAnwMAAAAAAAAAAAAAjQMAAAAAAACQAwAAAAAAAAAAAABDAwAAAAAAAEYDAAAAAAAAAAAAAAcDAAAAAAAACgMAAAAAAAAAAAAA0wIAAAAAAADWAgAAAAAAAAAAAADFAgAAAAAAAMgCAAAAAAAAAAAAAHcCAAAAAAAAegIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawIAAAAAAACoAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					391,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_o",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "_"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "repo."
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "_repo",
+									"format": "text",
+									"keep_prefix": false,
+									"must_insert": true,
+									"trigger": "_repo"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ".Get"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "All"
+								}
+							]
+						]
+					},
+					"FgAAAGoCAAAAAAAAawIAAAAAAAAAAAAAawIAAAAAAAB3AgAAAAAAAAAAAAB3AgAAAAAAAHgCAAAAAAAAAAAAAHgCAAAAAAAAeQIAAAAAAAAAAAAAeQIAAAAAAAB6AgAAAAAAAAAAAAB6AgAAAAAAAHsCAAAAAAAAAAAAAHsCAAAAAAAAfAIAAAAAAAAAAAAAfAIAAAAAAAB9AgAAAAAAAAAAAAB9AgAAAAAAAIICAAAAAAAAAAAAAIECAAAAAAAAgQIAAAAAAAABAAAAb4ACAAAAAAAAgAIAAAAAAAABAAAAcH8CAAAAAAAAfwIAAAAAAAABAAAAZX4CAAAAAAAAfgIAAAAAAAABAAAAcn0CAAAAAAAAfQIAAAAAAAABAAAAX3wCAAAAAAAAfAIAAAAAAAABAAAALnwCAAAAAAAAfQIAAAAAAAAAAAAAfQIAAAAAAAB+AgAAAAAAAAAAAAB+AgAAAAAAAH8CAAAAAAAAAAAAAH8CAAAAAAAAgAIAAAAAAAAAAAAAgAIAAAAAAACBAgAAAAAAAAAAAACBAgAAAAAAAIICAAAAAAAAAAAAAIICAAAAAAAAgwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQIAAAAAAABpAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					399,
 					1,
 					"sequence",
 					{
@@ -411,83 +1011,6 @@
 									"count": 1,
 									"mode": "mode_internal_normal"
 								}
-							],
-							[
-								"insert",
-								{
-									"characters": "."
-								}
-							],
-							[
-								"left_delete",
-								null
-							],
-							[
-								"left_delete",
-								null
-							],
-							[
-								"insert",
-								{
-									"characters": "e"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "."
-								}
-							],
-							[
-								"insert_dimensions",
-								null
-							]
-						]
-					},
-					"BgAAAHMDAAAAAAAAdAMAAAAAAAAAAAAAcwMAAAAAAABzAwAAAAAAAAEAAAAucgMAAAAAAAByAwAAAAAAAAEAAABlcgMAAAAAAABzAwAAAAAAAAAAAABzAwAAAAAAAHQDAAAAAAAAAAAAAHQDAAAAAAAAfgMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAcgMAAAAAAAByAwAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
-			"settings":
-			{
-				"buffer_size": 1018,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			},
-			"undo_stack":
-			[
-				[
-					18,
-					1,
-					"sequence",
-					{
-						"commands":
-						[
-							[
-								"nv_vi_o",
-								{
-									"count": 1,
-									"mode": "mode_internal_normal"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "a."
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "Con"
-								}
-							],
-							[
-								"insert_dimensions",
-								null
 							],
 							[
 								"insert_snippet",
@@ -510,248 +1033,67 @@
 							]
 						]
 					},
-					"CwAAAAMCAAAAAAAABAIAAAAAAAAAAAAABAIAAAAAAAAQAgAAAAAAAAAAAAAQAgAAAAAAABECAAAAAAAAAAAAABECAAAAAAAAEgIAAAAAAAAAAAAAEgIAAAAAAAATAgAAAAAAAAAAAAATAgAAAAAAABQCAAAAAAAAAAAAABQCAAAAAAAAFQIAAAAAAAAAAAAAEgIAAAAAAAASAgAAAAAAAAMAAABDb24SAgAAAAAAABkCAAAAAAAAAAAAABkCAAAAAAAAGwIAAAAAAAAAAAAAGwIAAAAAAAAcAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA8gEAAAAAAADyAQAAAAAAAAAAAAAAAPC/"
+					"AgAAAIMCAAAAAAAAhQIAAAAAAAAAAAAAhQIAAAAAAACGAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggIAAAAAAACCAgAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					37,
+					403,
 					1,
-					"nv_vi_r",
+					"toggle_comment",
 					{
-						"char": "0",
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
+						"block": false
 					},
-					"AQAAAFsBAAAAAAAAXAEAAAAAAAABAAAAOQ",
-					"AQAAAAAAAAABAAAAWwEAAAAAAABbAQAAAAAAAAAAAAAAAPC/"
+					"AQAAAHcCAAAAAAAAegIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhQIAAAAAAACFAgAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					49,
-					1,
-					"nv_vi_dd",
-					{
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
-					},
-					"AQAAAAQCAAAAAAAABAIAAAAAAAAZAAAAICAgICAgICAgICAgYS5Db25uZWN0KCk7Cg",
-					"AQAAAAAAAAABAAAAGwIAAAAAAAAbAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					59,
-					1,
-					"nv_vi_paste",
-					{
-						"before_cursor": false,
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
-					},
-					"AQAAAF0CAAAAAAAA9gMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAWwIAAAAAAABbAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					62,
+					406,
 					1,
 					"nv_vi_big_o",
 					{
 						"count": 1,
 						"mode": "mode_internal_normal"
 					},
-					"AgAAAF0CAAAAAAAAXgIAAAAAAAAAAAAAXQIAAAAAAABlAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAZQIAAAAAAABlAgAAAAAAAAAAAAAAAPC/"
+					"AgAAAGsCAAAAAAAAbAIAAAAAAAAAAAAAawIAAAAAAAB3AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiAIAAAAAAACIAgAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					64,
+					415,
 					1,
-					"nv_enter_normal_mode",
+					"insert",
 					{
-						"mode": "mode_insert"
+						"characters": "\t"
 					},
-					"AQAAAF0CAAAAAAAAXQIAAAAAAAAIAAAAICAgICAgICA",
-					"AQAAAAAAAAABAAAAZQIAAAAAAABlAgAAAAAAAAAAAAAAAPC/"
+					"AQAAAHYCAAAAAAAAdwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgIAAAAAAAB2AgAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					84,
+					423,
 					1,
-					"sequence",
-					{
-						"commands":
-						[
-							[
-								"nv_vi_c",
-								{
-									"count": 1,
-									"mode": "mode_visual",
-									"register": "\""
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "Connect"
-								}
-							]
-						]
-					},
-					"CAAAAJcCAAAAAAAAlwIAAAAAAAALAAAASW5zdGFudGlhdGWXAgAAAAAAAJgCAAAAAAAAAAAAAJgCAAAAAAAAmQIAAAAAAAAAAAAAmQIAAAAAAACaAgAAAAAAAAAAAACaAgAAAAAAAJsCAAAAAAAAAAAAAJsCAAAAAAAAnAIAAAAAAAAAAAAAnAIAAAAAAACdAgAAAAAAAAAAAACdAgAAAAAAAJ4CAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlwIAAAAAAACiAgAAAAAAAAAAAAAAAPC/"
+					"paste",
+					null,
+					"AQAAAHcCAAAAAAAAmwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdwIAAAAAAAB3AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					425,
+					1,
+					"trim_trailing_white_space",
+					null,
+					"AQAAAJsCAAAAAAAAmwIAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAmwIAAAAAAACbAgAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		},
 		{
-			"file": "/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Plugins/MySqlPlugin.cs",
+			"file": "src/DataStore/Plugins/MySqlBlabRepository.cs",
 			"settings":
 			{
-				"buffer_size": 819,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"buffer_size": 1239,
+				"line_ending": "Windows"
 			},
 			"undo_stack":
 			[
-				[
-					6,
-					1,
-					"nv_vi_x",
-					{
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
-					},
-					"AQAAANwAAAAAAAAA3AAAAAAAAAABAAAAOw",
-					"AQAAAAAAAAABAAAA3AAAAAAAAADcAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					22,
-					1,
-					"sequence",
-					{
-						"commands":
-						[
-							[
-								"nv_vi_a",
-								{
-									"count": 1,
-									"mode": "mode_internal_normal"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": " "
-								}
-							],
-							[
-								"insert_snippet",
-								{
-									"contents": "{$0}"
-								}
-							],
-							[
-								"move",
-								{
-									"by": "characters",
-									"forward": true
-								}
-							],
-							[
-								"left_delete",
-								null
-							],
-							[
-								"insert",
-								{
-									"characters": "\n"
-								}
-							],
-							[
-								"insert",
-								{
-									"characters": "}"
-								}
-							]
-						]
-					},
-					"BQAAANwAAAAAAAAA3QAAAAAAAAAAAAAA3QAAAAAAAADfAAAAAAAAAAAAAADeAAAAAAAAAN4AAAAAAAAAAQAAAH3xAgAAAAAAAPICAAAAAAAAAAAAAPICAAAAAAAA8wIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA2wAAAAAAAADbAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					32,
-					1,
-					"omni_sharp_format_document",
-					null,
-					"AQAAAAAAAAAAAAAASAMAAAAAAAD0AgAAdXNpbmcgU3lzdGVtOwp1c2luZyBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYzsKdXNpbmcgU3lzdGVtLkxpbnE7CnVzaW5nIFN5c3RlbS5UZXh0Owp1c2luZyBTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzOwp1c2luZyBEYXRhU3RvcmUuRXhjZXB0aW9uczsKdXNpbmcgTXlTcWwuRGF0YTsKdXNpbmcgTXlTcWwuRGF0YS5NeVNxbENsaWVudDsKCm5hbWVzcGFjZSBEYXRhU3RvcmUuUGx1Z2lucyB7CnB1YmxpYyBjbGFzcyBNeVNxbFBsdWdpbgp7CiAgICBwcml2YXRlIE15U3FsLkRhdGEuTXlTcWxDbGllbnQuTXlTcWxDb25uZWN0aW9uPyBjb25uOwogICAgcHJpdmF0ZSBzdHJpbmcgY29ubmVjdGlvblN0cmluZzsKCiAgICBwdWJsaWMgTXlTcWxQbHVnaW4oc3RyaW5nIGNvbm5TdHIpCiAgICB7CiAgICAgICAgdGhpcy5jb25uZWN0aW9uU3RyaW5nID0gY29ublN0cjsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBDb25uZWN0KCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHRoaXMuY29ubiA9IG5ldyBNeVNxbC5EYXRhLk15U3FsQ2xpZW50Lk15U3FsQ29ubmVjdGlvbih0aGlzLmNvbm5lY3Rpb25TdHJpbmcpOwogICAgICAgICAgICB0aGlzLmNvbm4uT3BlbigpOwogICAgICAgIH0KICAgICAgICBjYXRjaCAoTXlTcWwuRGF0YS5NeVNxbENsaWVudC5NeVNxbEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIHRocm93IG5ldyBFeGNlcHRpb24oZXguTWVzc2FnZSk7CiAgICAgICAgfQogICAgfQp9Cn0K",
-					"AQAAAAAAAAABAAAA8gIAAAAAAADyAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					41,
-					1,
-					"nv_vi_dd",
-					{
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
-					},
-					"AQAAAHQAAAAAAAAAdAAAAAAAAAAcAAAAdXNpbmcgRGF0YVN0b3JlLkV4Y2VwdGlvbnM7Cg",
-					"AQAAAAAAAAABAAAAjQAAAAAAAACNAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					57,
-					1,
-					"insert",
-					{
-						"characters": "\\"
-					},
-					"AQAAAPUCAAAAAAAA9gIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9QIAAAAAAAD1AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					64,
-					1,
-					"nv_vi_x",
-					{
-						"count": 1,
-						"mode": "mode_internal_normal",
-						"register": "\""
-					},
-					"AQAAAPUCAAAAAAAA9QIAAAAAAAABAAAAXA",
-					"AQAAAAAAAAABAAAA9QIAAAAAAAD1AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					73,
-					1,
-					"sequence",
-					{
-						"commands":
-						[
-							[
-								"insert",
-								{
-									"characters": "System."
-								}
-							],
-							[
-								"insert_dimensions",
-								null
-							]
-						]
-					},
-					"CAAAAPUCAAAAAAAA9gIAAAAAAAAAAAAA9gIAAAAAAAD3AgAAAAAAAAAAAAD3AgAAAAAAAPgCAAAAAAAAAAAAAPgCAAAAAAAA+QIAAAAAAAAAAAAA+QIAAAAAAAD6AgAAAAAAAAAAAAD6AgAAAAAAAPsCAAAAAAAAAAAAAPsCAAAAAAAA/AIAAAAAAAAAAAAA/AIAAAAAAAAFAwAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9QIAAAAAAAD1AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					83,
-					1,
-					"nv_vi_x",
-					{
-						"count": 1,
-						"mode": "mode_visual",
-						"register": "\""
-					},
-					"AQAAAAUDAAAAAAAABQMAAAAAAAAJAAAARXhjZXB0aW9u",
-					"AQAAAAAAAAABAAAABQMAAAAAAAAOAwAAAAAAAAAAAAAAAPC/"
-				]
 			]
 		}
 	],
@@ -786,6 +1128,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"terminal",
+				"Terminal: Open in project folder"
+			],
 			[
 				"termina",
 				"Terminal: Open in project folder"
@@ -924,32 +1270,43 @@
 	"expanded_folders":
 	[
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins"
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Controllers"
 	],
 	"file_history":
 	[
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlBlabRepository.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Controllers/WeatherForecastController.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Program.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/WeatherForecast.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Properties/launchSettings.json",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/appsettings.json",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw04/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw03/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/hw03/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins/MySqlPluginTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Plugins/MySqlPlugin.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins/InMemBlabRepositoryTest.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/Domain/Exceptions/GeneralExceptions.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Exceptions/BlabExceptions.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Exceptions/NotFoundException.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Exceptions/UserExceptions.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Exception/BlabExceptions.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/hw03/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Shared/_Layout.cshtml",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Registration.cshtml",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Feed.cshtml",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlBlabRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlPlugin.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemBlabRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/InMemoryRepositoryTests.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IBlabRepository.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IUserRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemUserRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/DataStore.csproj",
@@ -967,7 +1324,6 @@
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/UserAdapterExceptions.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Exceptions/GeneralExceptions.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IDomainEntity.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw03/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/obj/Debug/net6.0/Domain.UnitTest.AssemblyInfo.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/DataStore.UnitTest.csproj",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/DbContexts/BlabberContextTests.cs",
@@ -1052,19 +1408,11 @@
 		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/mockfetcher.go",
 		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/mockfetcher_test.go",
 		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/urlfetcher.go",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/urlfetcher_test.go",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/cmd/version.go",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/cmd/crawl.go",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/main.go",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/cmd/root.go",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/go.mod",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/Makefile",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/.gitignore",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/.gitattributes"
+		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/src/pkg/adapter/urlfetcher_test.go"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -1107,23 +1455,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins/MySqlPluginTests.cs",
+					"file": "src/WebApi/Controllers/BlabsController.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 912,
+						"buffer_size": 1054,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								893,
-								893
+								666,
+								666
 							]
 						],
 						"settings":
 						{
+							"_nv_visual_sel_mode": "mode_visual_line",
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".<",
+									"selector": "source.cs"
+								}
+							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1131,8 +1487,8 @@
 								{
 									"1":
 									[
-										892,
-										893
+										665,
+										666
 									]
 								},
 								"icon":
@@ -1147,8 +1503,8 @@
 								{
 									"1":
 									[
-										891,
-										892
+										664,
+										665
 									]
 								},
 								"unmatched":
@@ -1157,155 +1513,26 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"git_gutter_is_enabled": true,
-							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins/MySqlPluginTests.cs",
-							"oops":
-							{
-								"107,114": "{ expected",
-								"763,764": "} expected"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 2.0,
-						"translation.y": 17.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
-					"selected": true,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1018,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								669,
-								669
-							]
-						],
-						"settings":
-						{
-							"_nv_visual_sel_mode": "mode_visual",
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1015,
-										1016
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										194,
-										195
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1345,7 +1572,17 @@
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": false,
 							"git_gutter_is_enabled": true,
-							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
+							"highlight_line": true,
+							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Controllers/BlabsController.cs",
+							"oops":
+							{
+								"469,470": "Invalid token '{' in class, struct, or interface member declaration",
+								"491,492": "Invalid token '=' in class, struct, or interface member declaration",
+								"493,499": "Invalid token ';' in class, struct, or interface member declaration",
+								"519,520": "Invalid token '=' in class, struct, or interface member declaration",
+								"521,525": "Invalid token ';' in class, struct, or interface member declaration",
+								"954,955": "Type or namespace definition, or end-of-file expected"
+							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1354,56 +1591,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"stack_multiselect": false,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Plugins/MySqlPlugin.cs",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "src/DataStore/Plugins/MySqlBlabRepository.cs",
+					"selected": true,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 819,
+						"buffer_size": 1239,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								333,
-								333
+								101,
+								101
 							]
 						],
 						"settings":
 						{
-							"_nv_visual_sel_mode": "mode_visual",
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										815,
-										816
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										228,
-										229
-									]
 								},
 								"unmatched":
 								{
@@ -1411,26 +1633,26 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1467,21 +1689,19 @@
 								"bh_default_close",
 								"bh_default_content"
 							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": false,
 							"git_gutter_is_enabled": true,
-							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStore/Plugins/MySqlPlugin.cs",
-							"oops":
-							{
-								"757,758": "Unexpected character '\\'"
-							},
+							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlBlabRepository.cs",
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"stack_multiselect": false,
 					"type": "text"
 				}
@@ -1490,7 +1710,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -1559,7 +1779,7 @@
 	"project": "BlabberApp.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1600,7 +1820,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 300.0,
+	"side_bar_width": 302.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
