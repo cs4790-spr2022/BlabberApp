@@ -9,6 +9,8 @@ namespace BlabberApp.Domain.Entities
         public DateTime DttmLastLogin { get; set;}
         public MailAddress Email { get; set; }
         public string Username { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         public User(string username, string email)
         {
