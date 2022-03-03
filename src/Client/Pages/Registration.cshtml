@@ -1,12 +1,12 @@
 ﻿@page
-@model MyApp.Namespace.RegistrationModel
+@model BlabberApp.Namespace.RegistrationModel
 @{
-    ViewData["Title"] = "Registration";
+  ViewData["Title"] = "Registration";
 }
 
 <h1>Registration</h1>
 
-<form>
+<form method="post">
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
     <div class="col">
@@ -35,15 +35,10 @@
     <label class="form-label" for="form3Example5">Username</label>
   </div>
 
-  <!-- Password input -->
-  <div class="form-outline mb-4">
-    <input type="password" id="form3Example4" class="form-control" />
-    <label class="form-label" for="form3Example4">Password</label>
-  </div>
-
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
-
+  <button type="submit" value="Submit" asp-page-handler="Submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+  @Model.FirstName
+  @Model.LastName
+  @Model.Email
+  @Model.Username
 </form>
-
-

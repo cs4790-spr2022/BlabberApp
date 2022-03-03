@@ -5,18 +5,18 @@
 # .NET Core build folders
 bin/
 obj/
+tests/*/TestResults/
 
 # Common node modules locations
 /node_modules
 /wwwroot/node_modules
 
 ### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
 
 # Local History for Visual Studio Code
 .history/
