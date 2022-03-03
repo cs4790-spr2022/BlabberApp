@@ -38,6 +38,12 @@ namespace BlabberApp.Namespace
             repo.Add(user);
 
             log.LogInformation("Add user into repo");
+
+            IEnumerable<User> users = repo.GetAll();
+            foreach (var u in users)
+            {
+                log.LogInformation(u.Username + ", " + u.Email);
+            }
         }
     }
 }
