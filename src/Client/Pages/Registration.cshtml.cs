@@ -1,7 +1,9 @@
+using System.Xml.Linq;
+using System.Text.RegularExpressions;
 using System;
-using BlabberApp.DataStore.Plugins;
 using BlabberApp.Domain.Common.Interfaces;
 using BlabberApp.Domain.Entities;
+using BlabberApp.DataStore.Plugins;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,16 +12,32 @@ namespace BlabberApp.Namespace
 {
     public class RegistrationModel : PageModel
     {
-        private User _user;
+        [BindProperty]
+        public string FirstName { get; set; }
+        [BindProperty]
+        public string LastName { get; set; }
+        [BindProperty]
+        public string Email { get; set; }
+        [BindProperty]
+        public string Username { get; set; }
+        private ILogger<RegistrationModel> log;
+        private IUserRepository repo;
+        public RegistrationModel(ILogger<RegistrationModel> logger, IUserRepository repository) {
+            log = logger;
+            repo = repository;
+            log.LogInformation("Injected the repo");
+        }
         public void OnGet()
         { }
-
-        public void OnPostSubmit(UserModel usr)
+        public void OnPost()
         {
-            _user = new User(usr.Username, usr.Email);
-            _user.FirstName = usr.FirstName;
-            _user.LastName = usr.LastName;
+            User user = new User(Username, Email);
+            user.FirstName = FirstName;
+            user.LastName = LastName;
+
+            repo.Add(user);
+
+            log.LogInformation("Add user into repo");
         }
     }
-
 }

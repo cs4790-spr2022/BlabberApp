@@ -1,7 +1,13 @@
+using BlabberApp.Domain.Common.Interfaces;
+using BlabberApp.DataStore.Plugins;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Dependency Injection Container LOL
+builder.Services.AddScoped<IUserRepository, InMemUserRepository>();
 
 var app = builder.Build();
 
