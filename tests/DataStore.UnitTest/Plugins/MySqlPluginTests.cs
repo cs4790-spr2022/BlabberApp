@@ -20,8 +20,7 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
             Assert.AreEqual(e.ToString(), a.ToString());
         }
 
-        [TestMethod]
-        public void MySqlPluginTest_Connect_NoException()
+        [TestMethod] public void MySqlPluginTest_Connect_NoException()
         {
             // Arrange
             string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
