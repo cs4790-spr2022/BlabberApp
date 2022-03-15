@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MyApp.Namespace
-{
+namespace Client.Pages {
     public class FeedModel : PageModel
     {
         public void OnGet()

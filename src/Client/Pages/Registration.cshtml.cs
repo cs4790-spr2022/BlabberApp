@@ -8,7 +8,7 @@ using BlabberApp.DataStore.Plugins;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BlabberApp.Namespace
+namespace Client.Pages
 {
     public class RegistrationModel : PageModel
     {
@@ -27,8 +27,9 @@ namespace BlabberApp.Namespace
             repo = repository;
             log.LogInformation("Injected the repo");
         }
+
         public void OnGet()
-        { }
+        {}
         public void OnPost()
         {
             User user = new User(Username, Email);

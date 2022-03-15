@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // Dependency Injection Container LOL
-builder.Services.AddScoped<IUserRepository, InMemUserRepository>();
+builder.Services.AddSingleton<IUserRepository, InMemUserRepository>();
 
 var app = builder.Build();
 
