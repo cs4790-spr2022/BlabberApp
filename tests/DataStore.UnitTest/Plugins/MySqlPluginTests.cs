@@ -12,7 +12,7 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
         public void MySqlPluginTest_Instantiate()
         {
             // Arrange
-            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
+            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
             MySqlPlugin e = new MySqlPlugin(dsn);
             // Act
             MySqlPlugin a = new MySqlPlugin(dsn);
@@ -28,7 +28,7 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
             // Act and Assert
             try{
                 a.Connect();
-            } catch (System.Exception ex) {
+            } catch (MySql.Data.MySqlClient.MySqlException ex) {
                 Assert.Fail("Expected NO exception, but got: " + ex.Message);
             }
             Assert.IsTrue(true);
@@ -41,7 +41,7 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
             string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
             MySqlPlugin a = new MySqlPlugin(dsn);
             // Act and Assert
-            Assert.ThrowsException<System.Exception>(() => a.Connect());
+            Assert.ThrowsException<MySql.Data.MySqlClient.MySqlException>(() => a.Connect());
         }
     }
 }

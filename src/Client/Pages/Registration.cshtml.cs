@@ -30,8 +30,8 @@ public class RegistrationModel : PageModel
         log.LogInformation("Injected the repo");
     }
 
-    public void OnGet()
-    { }
+    public void OnGet() {}
+
     public void OnPost()
     {
         User user = new User(Username.ToString(), Email.ToString());

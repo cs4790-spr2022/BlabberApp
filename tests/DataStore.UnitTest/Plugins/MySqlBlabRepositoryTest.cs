@@ -9,16 +9,30 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
     [TestClass]
     public class MySqlBlabRepositoryTest
     {
+        public MySqlBlabRepository h;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
+            h = new MySqlBlabRepository(dsn);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            h.RemoveAll();
+        }
+
         [TestMethod]
         public void MySqlBlabRepository_Instantiate()
         {
             // Arrange
             string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
-            MySqlBlabRepository e = new MySqlBlabRepository(dsn);
             // Act
             MySqlBlabRepository a = new MySqlBlabRepository(dsn);
             // Assert
-            Assert.AreEqual(e.ToString(), a.ToString());
+            Assert.AreEqual(h.ToString(), a.ToString());
         }
 
         [TestMethod]
@@ -46,28 +60,24 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
             string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
             MySqlBlabRepository a = new MySqlBlabRepository(dsn);
             // Act and Assert
-            Assert.ThrowsException<System.Exception>(() => a.Connect());
+            Assert.ThrowsException<MySql.Data.MySqlClient.MySqlException>(() => a.Connect());
         }
 
         [TestMethod]
         public void MySqlBlabRepositoryTest_Insert()
         {
            // Arrange
-            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
-            MySqlBlabRepository h = new MySqlBlabRepository(dsn);
             User u = new User("foobar", "foo@bar.com");
             Blab e = new Blab(
                 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
                 u
             );
            // Act
-           h.Connect();
            h.Add(e);
            Blab a = h.GetById(e.Id);
            // Assert
-           Assert.AreEqual(e, a);
+           Assert.AreEqual(e.Content, a.Content);
+           Assert.AreEqual(e.Author.Username, a.Author.Username);
         }
-
     }
-
 }

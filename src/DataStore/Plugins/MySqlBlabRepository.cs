@@ -13,25 +13,33 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
     public MySqlBlabRepository(string connStr) : base(connStr)
     {
         _cmd = new MySql.Data.MySqlClient.MySqlCommand();
+        _cmd.Connection = this.Conn;
     }
 
     public void Add(Blab blab)
     {
         try
         {
-            _cmd.CommandText = "INSERT INTO `donstringham`.`blabs` (sys_id, dttm_created, dttm_modified, content, usr) VALUES (@SysId, @Created, @Modified, @Content, @Usr)";
-            _cmd.Prepare();
-            _cmd.Parameters.AddWithValue("@SysId", blab.Id);
-            _cmd.Parameters.AddWithValue("@Created", blab.DttmCreated);
-            _cmd.Parameters.AddWithValue("@Modified", blab.DttmModified);
-            _cmd.Parameters.AddWithValue("@Content", blab.Content);
-            _cmd.Parameters.AddWithValue("@Usr", blab.Author);
+            _cmd.Connection.Open();
+
+            _cmd.CommandText = "INSERT INTO `donstringham`.`blabs`" +
+            " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
+            " (?, ?, ?, ?, ?)";
+            _cmd.Parameters.AddWithValue("param1", blab.Id);
+            _cmd.Parameters.AddWithValue("param2", blab.DttmCreated);
+            _cmd.Parameters.AddWithValue("param3", blab.DttmModified);
+            _cmd.Parameters.AddWithValue("param4", blab.Content);
+            _cmd.Parameters.AddWithValue("param5", blab.Author.Username);
+
             _cmd.ExecuteNonQuery();
         }
         catch (MySql.Data.MySqlClient.MySqlException ex)
         {
-            // MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             throw new Exception("Error " + ex.Number + " has occurred: " + ex.Message);
+        }
+        finally
+        {
+            _cmd.Connection.Close();
         }
     }
 
@@ -42,7 +50,29 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
     public Blab GetById(Guid Id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            _cmd.Connection.Open();
+
+            _cmd.CommandText = "SELECT dttm_created, dttm_modified, content, usr " +
+            "FROM `donstringham`.`blabs` WHERE `donstringham`.`blabs`.`sys_id` " +
+            "LIKE '" + Id.ToString() + "'";
+
+            var reader = _cmd.ExecuteReader();
+            reader.Read();
+            User u = new User(reader.GetString(3), "foo@bar.com");
+            Blab res = new Blab(reader.GetString(2), u);
+
+            return res;
+        }
+        catch (MySql.Data.MySqlClient.MySqlException ex)
+        {
+            throw new Exception("Error " + ex.Number + " has occurred: " + ex.Message);
+        }
+        finally
+        {
+            _cmd.Connection.Close();
+        }
     }
 
     public void Update(Blab blab)
@@ -57,7 +87,20 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
     public void RemoveAll()
     {
-        throw new NotImplementedException();
+        try
+        {
+            _cmd.Connection.Open();
+            _cmd.CommandText = "TRUNCATE `donstringham`.`blabs`";
+            _cmd.ExecuteNonQuery();
+        }
+        catch (MySql.Data.MySqlClient.MySqlException ex)
+        {
+            throw new Exception("Error " + ex.Number + " has occurred: " + ex.Message);
+        }
+        finally
+        {
+            _cmd.Connection.Close();
+        }
     }
 
     public IEnumerable<Blab> GetByUser(User usr)
