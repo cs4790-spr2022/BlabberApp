@@ -9,6 +9,10 @@ namespace BlabberApp.DataStore.Plugins;
 public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 {
     private readonly MySql.Data.MySqlClient.MySqlCommand _cmd;
+    private static string _dbname = "`donstringham`";
+    private static string _tbname = "`blabs`";
+    private readonly string _srcname = _dbname + "." + _tbname;
+
 
     public MySqlBlabRepository(string connStr) : base(connStr)
     {
@@ -22,7 +26,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
         {
             _cmd.Connection.Open();
 
-            _cmd.CommandText = "INSERT INTO `donstringham`.`blabs`" +
+            _cmd.CommandText = "INSERT INTO " + _srcname +
             " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
             " (?, ?, ?, ?, ?)";
             _cmd.Parameters.AddWithValue("param1", blab.Id);
@@ -35,7 +39,9 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
         }
         catch (MySql.Data.MySqlClient.MySqlException ex)
         {
-            throw new Exception("Error " + ex.Number + " has occurred: " + ex.Message);
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
         }
         finally
         {
@@ -55,19 +61,21 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
             _cmd.Connection.Open();
 
             _cmd.CommandText = "SELECT dttm_created, dttm_modified, content, usr " +
-            "FROM `donstringham`.`blabs` WHERE `donstringham`.`blabs`.`sys_id` " +
+            "FROM " + _srcname + " WHERE `donstringham`.`blabs`.`sys_id` " +
             "LIKE '" + Id.ToString() + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User u = new User(reader.GetString(3), "foo@bar.com");
+            User u = new User(reader.GetString(3), "foo@bar.com"); // This will be modified soon.
             Blab res = new Blab(reader.GetString(2), u);
 
             return res;
         }
         catch (MySql.Data.MySqlClient.MySqlException ex)
         {
-            throw new Exception("Error " + ex.Number + " has occurred: " + ex.Message);
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
         }
         finally
         {
@@ -90,12 +98,14 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
         try
         {
             _cmd.Connection.Open();
-            _cmd.CommandText = "TRUNCATE `donstringham`.`blabs`";
+            _cmd.CommandText = "TRUNCATE " + _srcname;
             _cmd.ExecuteNonQuery();
         }
         catch (MySql.Data.MySqlClient.MySqlException ex)
         {
-            throw new Exception("Error " + ex.Number + " has occurred: " + ex.Message);
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
         }
         finally
         {
