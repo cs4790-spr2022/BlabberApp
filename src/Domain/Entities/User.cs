@@ -1,7 +1,7 @@
-using BlabberApp.Domain.Common.Interfaces;
+using Domain.Common.Interfaces;
 using System.Net.Mail;
 
-namespace BlabberApp.Domain.Entities;
+namespace Domain.Entities;
 
 public class User : IEntity
 {

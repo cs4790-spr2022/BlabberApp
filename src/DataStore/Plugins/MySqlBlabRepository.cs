@@ -1,14 +1,12 @@
-using System.Collections;
-
-using BlabberApp.Domain.Common.Interfaces;
-using BlabberApp.Domain.Entities;
+using Domain.Common.Interfaces;
+using Domain.Entities;
 
 using MySql.Data.MySqlClient;
 
-namespace BlabberApp.DataStore.Plugins;
+namespace DataStore.Plugins;
 public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 {
-    private readonly MySql.Data.MySqlClient.MySqlCommand _cmd;
+    private readonly MySqlCommand _cmd;
     private static string _dbname = "`donstringham`";
     private static string _tbname = "`blabs`";
     private readonly string _srcname = _dbname + "." + _tbname;
@@ -16,7 +14,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
     public MySqlBlabRepository(string connStr) : base(connStr)
     {
-        _cmd = new MySql.Data.MySqlClient.MySqlCommand();
+        _cmd = new MySqlCommand();
         _cmd.Connection = this.Conn;
     }
 
@@ -37,7 +35,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
             _cmd.ExecuteNonQuery();
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+        catch (MySqlException ex)
         {
             throw new Exception(
                 "Error " + ex.Number + " has occurred: " + ex.Message
@@ -62,7 +60,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
             _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr " +
             "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
-            "LIKE '" + Id.ToString() + "'";
+            "LIKE '" + Id + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();

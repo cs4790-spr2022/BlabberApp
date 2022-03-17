@@ -31,5 +31,6 @@ tests/*/TestResults/
 
 # Sublime Text files
 *.sublime*
+.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,visualstudiocode

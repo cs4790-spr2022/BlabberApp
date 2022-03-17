@@ -1,11 +1,9 @@
-using BlabberApp.Domain.Entities;
+using Domain.Entities;
 
-namespace BlabberApp.Domain.Common.Interfaces
+namespace Domain.Common.Interfaces;
+
+public interface IUserRepository : IRepository<User>
 {
-
-    public interface IUserRepository : IRepository<User>
-    {
-        public User GetByEmail(string email);
-        public User GetByUsername(string username);
-    }
+    public User GetByEmail(string email);
+    public User GetByUsername(string username);
 }

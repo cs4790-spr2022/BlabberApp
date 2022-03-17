@@ -1,5 +1,5 @@
-using BlabberApp.Domain.Common.Interfaces;
-using BlabberApp.Domain.Entities;
+using Domain.Common.Interfaces;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -8,10 +8,10 @@ namespace WebApi.Controllers
     [Route("[controller]")]
     public class BlabsController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<BlabsController> _logger;
         private readonly IBlabRepository _repo;
 
-        public BlabsController(ILogger<WeatherForecastController> logger, IBlabRepository repo)
+        public BlabsController(ILogger<BlabsController> logger, IBlabRepository repo)
         {
             _logger = logger;
             _repo = repo;

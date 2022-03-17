@@ -1,5 +1,5 @@
-using BlabberApp.DataStore.Plugins;
-using BlabberApp.Domain.Entities;
+using DataStore.Plugins;
+using Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataStore.UnitTest.Plugins;

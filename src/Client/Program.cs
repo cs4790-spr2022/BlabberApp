@@ -1,5 +1,5 @@
-using BlabberApp.Domain.Common.Interfaces;
-using BlabberApp.DataStore.Plugins;
+using Domain.Common.Interfaces;
+using DataStore.Plugins;
 
 var builder = WebApplication.CreateBuilder(args);
 

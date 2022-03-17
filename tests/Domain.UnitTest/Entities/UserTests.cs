@@ -1,7 +1,7 @@
-using BlabberApp.Domain.Entities;
+using Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BlabberApp.Domain.UnitTests.Entities;
+namespace Domain.UnitTest.Entities;
 
 [TestClass]
 public class UserTests

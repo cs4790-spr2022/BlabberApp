@@ -1,13 +1,13 @@
 
-using BlabberApp.Domain.Common.Interfaces;
-using BlabberApp.Domain.Entities;
+using Domain.Common.Interfaces;
+using Domain.Entities;
 
 using MySql.Data.MySqlClient;
 
-namespace BlabberApp.DataStore.Plugins;
+namespace DataStore.Plugins;
 public class MySqlUserRepository : MySqlPlugin, IUserRepository
 {
-    private readonly MySql.Data.MySqlClient.MySqlCommand _cmd;
+    private readonly MySqlCommand _cmd;
     private static string _dbname = "`donstringham`";
     private static string _tbname = "`user`";
     private readonly string _srcname = _dbname + "." + _tbname;
@@ -15,7 +15,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
     public MySqlUserRepository(string connStr) : base(connStr)
     {
-        _cmd = new MySql.Data.MySqlClient.MySqlCommand();
+        _cmd = new MySqlCommand();
         _cmd.Connection = this.Conn;
     }
 
@@ -37,7 +37,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
             _cmd.ExecuteNonQuery();
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+        catch (MySqlException ex)
         {
             throw new Exception(
                 "Error " + ex.Number + " has occurred: " + ex.Message
@@ -63,16 +63,15 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
             // TODO SQL will change.
             _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr " +
             "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
-            "LIKE '" + id.ToString() + "'";
+            "LIKE '" + id + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User res = new User(reader.GetString(4), "foo@bar.com");
-            res.Id = new Guid(reader.GetString(0));
+            User res = new (reader.GetString(4), "foo@bar.com") {Id = new Guid(reader.GetString(0))};
 
             return res;
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+        catch (MySqlException ex)
         {
             throw new Exception(
                 "Error " + ex.Number + " has occurred: " + ex.Message
@@ -103,7 +102,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
             _cmd.CommandText = "TRUNCATE " + _srcname;
             _cmd.ExecuteNonQuery();
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+        catch (MySqlException ex)
         {
             throw new Exception(
                 "Error " + ex.Number + " has occurred: " + ex.Message

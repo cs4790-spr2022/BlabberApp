@@ -1,67 +1,68 @@
-using BlabberApp.Domain.Entities;
-using BlabberApp.Domain.Common.Interfaces;
-using System.Collections.Generic;
+using Domain.Entities;
+using Domain.Common.Interfaces;
 
-namespace BlabberApp.DataStore.Plugins
+namespace DataStore.Plugins;
+
+public class InMemUserRepository : IUserRepository
 {
-    public class InMemUserRepository : IUserRepository
+    private readonly List<User> _buf = new();
+
+    public int Count()
     {
+        return _buf.Count;
+    }
 
-        private List<User> _buf = new List<User>();
+    public void Add(User user)
+    {
+        _buf.Add(user);
+    }
 
-        public int Count()
+    public IEnumerable<User> GetAll()
+    {
+        return _buf;
+    }
+
+    public User GetById(Guid Id)
+    {
+        foreach (User user in _buf)
         {
-            return _buf.Count;
+            if (Id.Equals(user.Id)) return user;
         }
 
-        public void Add(User user)
+        throw new Exception("Not found");
+    }
+
+    public void Update(User user)
+    {
+        try
         {
+            user.Validate();
+            _buf.Remove(user);
             _buf.Add(user);
         }
+        catch
+        {
+            throw new Exception("Something bad happened!");
+        }
+    }
 
-        public IEnumerable<User> GetAll()
-        {
-            return _buf;
-        }
+    public void Remove(User user)
+    {
+        _buf.Remove(user);
+    }
 
-        public User GetById(Guid Id)
-        {
-            foreach (User user in _buf)
-            {
-                if (Id.Equals(user.Id)) return user;
-            }
-            throw new Exception("Not found");
-        }
+    public void RemoveAll()
+    {
+        _buf.Clear();
+    }
 
-        public void Update(User user)
-        {
-            try
-            {
-                user.Validate();
-                _buf.Remove(user);
-                _buf.Add(user);
-            }
-            catch
-            {
-                throw new Exception("Something bad happened!");
-            }
-        }
+    public User GetByEmail(string email)
+    {
+        throw new NotImplementedException();
+    }
 
-        public void Remove(User user)
-        {
-            _buf.Remove(user);
-        }
-
-        public void RemoveAll()
-        {
-            _buf.Clear();
-        }
-        public User GetByEmail(string email){
-            throw new NotImplementedException();
-        }
-        public User GetByUsername(string username)
-        {
-            throw new NotImplementedException();
-        }
+    public User GetByUsername(string username)
+    {
+        throw new NotImplementedException();
     }
 }

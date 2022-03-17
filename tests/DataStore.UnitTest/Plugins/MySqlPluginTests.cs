@@ -1,4 +1,4 @@
-using BlabberApp.DataStore.Plugins;
+using DataStore.Plugins;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataStore.UnitTest.Plugins;

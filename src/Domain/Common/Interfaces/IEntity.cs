@@ -1,6 +1,4 @@
-using System;
-
-namespace BlabberApp.Domain.Common.Interfaces;
+namespace Domain.Common.Interfaces;
 
 public interface IEntity
 {

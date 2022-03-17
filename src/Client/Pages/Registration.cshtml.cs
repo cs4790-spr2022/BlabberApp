@@ -1,10 +1,5 @@
-using System;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
-
-using BlabberApp.DataStore.Plugins;
-using BlabberApp.Domain.Common.Interfaces;
-using BlabberApp.Domain.Entities;
+using Domain.Common.Interfaces;
+using Domain.Entities;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -21,31 +16,31 @@ public class RegistrationModel : PageModel
     public string? Email { get; set; }
     [BindProperty]
     public string? Username { get; set; }
-    private ILogger<RegistrationModel> log;
-    private IUserRepository repo;
+    private readonly ILogger<RegistrationModel> _log;
+    private readonly IUserRepository _repo;
     public RegistrationModel(ILogger<RegistrationModel> logger, IUserRepository repository)
     {
-        log = logger;
-        repo = repository;
-        log.LogInformation("Injected the repo");
+        _log = logger;
+        _repo = repository;
+        _log.LogInformation("Injected the repo");
     }
 
     public void OnGet() {}
 
     public void OnPost()
     {
-        User user = new User(Username.ToString(), Email.ToString());
-        user.FirstName = FirstName;
-        user.LastName = LastName;
+        User usr = new(Username, Email);
+        _repo.Add(usr);
 
-        repo.Add(user);
+        _log.LogInformation("Add user into repo");
 
-        log.LogInformation("Add user into repo");
-
-        IEnumerable<User> users = repo.GetAll();
+        IEnumerable<User> users = _repo.GetAll();
         foreach (var u in users)
         {
-            log.LogInformation(u.Username + ", " + u.Email);
+            if (u.Username != null)
+            {
+                _log.LogInformation(u.Username + ", " + u.Email);
+            }
         }
     }
 }
