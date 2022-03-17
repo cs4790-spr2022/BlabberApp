@@ -1,28 +1,29 @@
-using System;
-
 using BlabberApp.DataStore.Plugins;
 using BlabberApp.Domain.Entities;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BlabberApp.DataStore.UnitTests.Plugins;
+namespace DataStore.UnitTest.Plugins;
 
 [TestClass]
 public class MySqlBlabRepositoryTest
 {
-    public MySqlBlabRepository h;
-    private string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
+    private readonly MySqlBlabRepository _h;
+    private readonly string _dsn;
+
+    public MySqlBlabRepositoryTest()
+    {
+        _dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
+        _h = new MySqlBlabRepository(_dsn);
+    }
 
     [TestInitialize]
     public void Setup()
-    {
-        h = new MySqlBlabRepository(dsn);
-    }
+    {}
 
     [TestCleanup]
     public void TearDown()
     {
-        h.RemoveAll();
+        _h.RemoveAll();
     }
 
     [TestMethod]
@@ -30,16 +31,16 @@ public class MySqlBlabRepositoryTest
     {
         // Arrange
         // Act
-        MySqlBlabRepository a = new MySqlBlabRepository(dsn);
+        MySqlBlabRepository a = new MySqlBlabRepository(_dsn);
         // Assert
-        Assert.AreEqual(h.ToString(), a.ToString());
+        Assert.AreEqual(_h.ToString(), a.ToString());
     }
 
     [TestMethod]
     public void MySqlBlabRepository_Connect_NoException()
     {
         // Arrange
-        MySqlBlabRepository a = new MySqlBlabRepository(dsn);
+        MySqlBlabRepository a = new MySqlBlabRepository(_dsn);
         // Act and Assert
         try
         {
@@ -71,8 +72,8 @@ public class MySqlBlabRepositoryTest
             "foobar"
         );
         // Act
-        h.Add(e);
-        Blab a = h.GetById(e.Id);
+        _h.Add(e);
+        Blab a = _h.GetById(e.Id);
         // Assert
         Assert.AreEqual(e.Id.ToString(), a.Id.ToString());
         Assert.AreEqual(e.Content, a.Content);
