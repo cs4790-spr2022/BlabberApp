@@ -61,7 +61,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
             _cmd.Connection.Open();
 
             _cmd.CommandText = "SELECT dttm_created, dttm_modified, content, usr " +
-            "FROM " + _srcname + " WHERE `donstringham`.`blabs`.`sys_id` " +
+            "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
             "LIKE '" + Id.ToString() + "'";
 
             var reader = _cmd.ExecuteReader();
