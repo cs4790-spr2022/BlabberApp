@@ -69,13 +69,14 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
            // Arrange
             User u = new User("foobar", "foo@bar.com");
             Blab e = new Blab(
-                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
                 u
             );
            // Act
            h.Add(e);
            Blab a = h.GetById(e.Id);
            // Assert
+           Assert.AreEqual(e.Id.ToString(), a.Id.ToString());
            Assert.AreEqual(e.Content, a.Content);
            Assert.AreEqual(e.Author.Username, a.Author.Username);
         }

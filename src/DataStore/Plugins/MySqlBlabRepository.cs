@@ -60,14 +60,15 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
         {
             _cmd.Connection.Open();
 
-            _cmd.CommandText = "SELECT dttm_created, dttm_modified, content, usr " +
+            _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr " +
             "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
             "LIKE '" + Id.ToString() + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User u = new User(reader.GetString(3), "foo@bar.com"); // This will be modified soon.
-            Blab res = new Blab(reader.GetString(2), u);
+            User u = new User(reader.GetString(4), "foo@bar.com"); // This will be modified soon.
+            Blab res = new Blab(reader.GetString(3), u);
+            res.Id = new Guid(reader.GetString(0));
 
             return res;
         }

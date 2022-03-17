@@ -7,7 +7,7 @@ namespace BlabberApp.Domain.Entities
     {
         public abstract void AreEqual(IEntity entity);
         public abstract void Validate();
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
         public DateTime DttmCreated { get; set; }
         public DateTime DttmModified { get; set; }
 
