@@ -11,13 +11,12 @@ namespace BlabberApp.Domain.UnitTests.Entities
         public void NewBlabShouldReturnCorrectValues()
         {
             // Arrange
-            var u = new User("foobar", "foobar@example.com");
-            var e = new Blab("Lorem ipsum voluptate proident ut ut irure ex ex aliqua in esse non eiusmod adipisicing exercitation consequat in quis est.", u);
+            var e = new Blab("Lorem ipsum voluptate proident ut ut irure ex ex aliqua in esse non eiusmod adipisicing exercitation consequat in quis est.", "foobar");
             // Act
-            var a = new Blab("Lorem ipsum voluptate proident ut ut irure ex ex aliqua in esse non eiusmod adipisicing exercitation consequat in quis est.", u);
+            var a = new Blab("Lorem ipsum voluptate proident ut ut irure ex ex aliqua in esse non eiusmod adipisicing exercitation consequat in quis est.", "foobar");
             // Assert
-            Assert.AreNotEqual(e.Id, a.Id, "ID's are equal");
-            Assert.AreEqual(e.Author, a.Author, "User are NOT equal");
+            Assert.AreNotEqual(e.Id.ToString(), a.Id.ToString(), "ID's are equal");
+            Assert.AreEqual(e.Username, a.Username, "User are NOT equal");
             Assert.AreEqual(e.Content, a.Content, "Content is NOT equal");
         }
     }

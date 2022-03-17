@@ -10,11 +10,11 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
     public class MySqlBlabRepositoryTest
     {
         public MySqlBlabRepository h;
+        private string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
 
         [TestInitialize]
         public void Setup()
         {
-            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
             h = new MySqlBlabRepository(dsn);
         }
 
@@ -28,7 +28,6 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
         public void MySqlBlabRepository_Instantiate()
         {
             // Arrange
-            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
             // Act
             MySqlBlabRepository a = new MySqlBlabRepository(dsn);
             // Assert
@@ -39,7 +38,6 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
         public void MySqlBlabRepository_Connect_NoException()
         {
             // Arrange
-            string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
             MySqlBlabRepository a = new MySqlBlabRepository(dsn);
             // Act and Assert
             try
@@ -67,10 +65,9 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
         public void MySqlBlabRepositoryTest_Insert()
         {
            // Arrange
-            User u = new User("foobar", "foo@bar.com");
             Blab e = new Blab(
                 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
-                u
+                "foobar"
             );
            // Act
            h.Add(e);
@@ -78,7 +75,7 @@ namespace BlabberApp.DataStore.UnitTests.Plugins
            // Assert
            Assert.AreEqual(e.Id.ToString(), a.Id.ToString());
            Assert.AreEqual(e.Content, a.Content);
-           Assert.AreEqual(e.Author.Username, a.Author.Username);
+           Assert.AreEqual(e.Username, a.Username);
         }
     }
 }

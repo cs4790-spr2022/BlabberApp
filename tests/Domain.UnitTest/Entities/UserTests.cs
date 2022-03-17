@@ -16,6 +16,6 @@ public class UserTests
         // Assert
         Assert.AreEqual(e.Username, a.Username, "Username's are NOT equal");
         Assert.AreEqual(e.Email.Address, a.Email.Address, "Email's are NOT equal");
-        Assert.AreNotEqual(e.Id, a.Id, "ID's are equal");
+        Assert.AreNotEqual(e.Id.ToString(), a.Id.ToString(), "ID's are equal");
     }
 }

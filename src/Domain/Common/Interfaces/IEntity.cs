@@ -1,10 +1,9 @@
-namespace BlabberApp.Domain.Common.Interfaces
+using System;
+
+namespace BlabberApp.Domain.Common.Interfaces;
+
+public interface IEntity
 {
-    public interface IEntity
-    {
-        public void AreEqual(IEntity entity);
-        public void Validate();
-        public DateTime DttmCreated {get; set;}
-        public DateTime DttmModified {get; set;}
-    }
+    public bool AreEqual(IEntity entity);
+    public void Validate();
 }

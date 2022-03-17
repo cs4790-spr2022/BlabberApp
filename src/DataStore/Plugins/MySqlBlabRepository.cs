@@ -33,7 +33,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
             _cmd.Parameters.AddWithValue("param2", blab.DttmCreated);
             _cmd.Parameters.AddWithValue("param3", blab.DttmModified);
             _cmd.Parameters.AddWithValue("param4", blab.Content);
-            _cmd.Parameters.AddWithValue("param5", blab.Author.Username);
+            _cmd.Parameters.AddWithValue("param5", blab.Username);
 
             _cmd.ExecuteNonQuery();
         }
@@ -66,8 +66,8 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User u = new User(reader.GetString(4), "foo@bar.com"); // This will be modified soon.
-            Blab res = new Blab(reader.GetString(3), u);
+            User u = new User(reader.GetString(4), "foo@bar.com");
+            Blab res = new Blab(reader.GetString(3), "foobar");
             res.Id = new Guid(reader.GetString(0));
 
             return res;

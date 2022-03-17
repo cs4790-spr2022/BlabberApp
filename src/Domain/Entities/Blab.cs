@@ -2,23 +2,28 @@ using BlabberApp.Domain.Common.Interfaces;
 
 namespace BlabberApp.Domain.Entities
 {
-    public class Blab : BaseEntity
+    public class Blab : IEntity
     {
         public string Content { get; set; }
-        public User Author { get; set; }
+        public string Username { get; set; }
+        public DateTime DttmCreated { get; set; }
+        public DateTime DttmModified { get; set; }
+        public Guid Id { get; set; }
 
-        public Blab(string Msg, User Usr)
+        public Blab(string Msg, string Usr)
         {
             Content = Msg;
-            Author = Usr;
+            Username = Usr;
+            DttmCreated = DttmModified = DateTime.Now;
+            Id = Guid.NewGuid();
         }
 
-        override public void AreEqual(IEntity blab)
+        public bool AreEqual(IEntity b)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
-        override public void Validate()
+        public void Validate()
         {
             // TODO content exists
             // TODO a user exists
