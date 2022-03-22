@@ -31,7 +31,7 @@ public class MySqlBlabRepositoryTest
     {
         // Arrange
         // Act
-        MySqlBlabRepository a = new MySqlBlabRepository(_dsn);
+        MySqlBlabRepository a = new(_dsn);
         // Assert
         Assert.AreEqual(_h.ToString(), a.ToString());
     }
@@ -40,7 +40,7 @@ public class MySqlBlabRepositoryTest
     public void MySqlBlabRepository_Connect_NoException()
     {
         // Arrange
-        MySqlBlabRepository a = new MySqlBlabRepository(_dsn);
+        MySqlBlabRepository a = new(_dsn);
         // Act and Assert
         try
         {
@@ -58,7 +58,7 @@ public class MySqlBlabRepositoryTest
     {
         // Arrange
         string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
-        MySqlBlabRepository a = new MySqlBlabRepository(dsn);
+        MySqlBlabRepository a = new(dsn);
         // Act and Assert
         Assert.ThrowsException<MySql.Data.MySqlClient.MySqlException>(() => a.Connect());
     }
@@ -67,7 +67,7 @@ public class MySqlBlabRepositoryTest
     public void MySqlBlabRepositoryTest_Insert()
     {
         // Arrange
-        Blab e = new Blab(
+        Blab e = new(
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
             "foobar"
         );
@@ -79,4 +79,19 @@ public class MySqlBlabRepositoryTest
         Assert.AreEqual(e.Content, a.Content);
         Assert.AreEqual(e.Username, a.Username);
     }
+    
+    [TestMethod]
+         public void MySqlBlabRepositoryTest_InsertTwo()
+         {
+             // Arrange
+             Blab e = new(
+                 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
+                 "foobar"
+             );
+             // Act
+             _h.Add(e);
+             Blab a = _h.GetById(e.Id);
+             Assert.AreEqual(e.Content, a.Content);
+             Assert.AreEqual(e.Username, a.Username);
+         }
 }

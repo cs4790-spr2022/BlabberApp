@@ -1,13 +1,16 @@
 using Domain.Common.Interfaces;
 using DataStore.Plugins;
 
+const string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
 // Dependency Injection Container LOL
-builder.Services.AddSingleton<IUserRepository, InMemUserRepository>();
+// builder.Services.AddSingleton<IUserRepository, InMemUserRepository>();
+builder.Services.AddSingleton<IUserRepository, MySqlUserRepository>(r => new MySqlUserRepository(dsn));
 
 var app = builder.Build();
 

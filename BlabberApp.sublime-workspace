@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"User",
+				"Username"
+			],
+			[
+				"Dtm",
+				"DttmModified"
+			],
+			[
+				"Dttm",
+				"DttmCreated"
+			],
+			[
+				"My",
+				"MySqlBlabRepository"
+			],
+			[
+				"U",
+				"Username"
+			],
+			[
+				"Cre",
+				"DttmCreated"
+			],
+			[
+				"A",
+				"Add"
+			],
+			[
 				"Get",
 				"GetById(Guid Id)"
 			],
@@ -44,10 +72,6 @@
 				"NotImplementedException"
 			],
 			[
-				"My",
-				"MySqlPlugin"
-			],
-			[
 				"Myq",
 				"MySqlException"
 			],
@@ -74,10 +98,6 @@
 			[
 				"model",
 				"modelBuilder"
-			],
-			[
-				"U",
-				"UseMySQL"
 			],
 			[
 				"DbCon",
@@ -207,29 +227,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/Client/Pages/Registration.cshtml.cs",
-			"settings":
-			{
-				"buffer_size": 1308,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			},
-			"undo_stack":
-			[
-				[
-					13,
-					1,
-					"nv_vi_o",
-					{
-						"count": 1,
-						"mode": "mode_internal_normal"
-					},
-					"AQAAACEBAAAAAAAAIgEAAAAAAAAAAAAA",
-					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACABAAAAAAAAIAEAAAAAAAAAAAAAAADwvw"
-				]
-			]
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -263,8 +260,36 @@
 		"selected_items":
 		[
 			[
+				"lsp",
+				"Preferences: LSP-OmniSharp Settings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
 				"omni",
-				"OmniSharpSublime: Select Server Version"
+				"Preferences: LSP-OmniSharp Settings"
+			],
+			[
+				"LSP Sett",
+				"Preferences: LSP-OmniSharp Settings"
+			],
+			[
+				"Preferences: LSP-O",
+				"Preferences: LSP-OmniSharp Settings"
+			],
+			[
+				"Enable",
+				"LSP: Enable Language Server in Project"
 			],
 			[
 				"close",
@@ -285,14 +310,6 @@
 			[
 				"ipsu",
 				"LoremIpsum: (15) some"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
 			],
 			[
 				"snippet: ip",
@@ -411,22 +428,26 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages"
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022"
 	],
 	"file_history":
 	[
-		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/User/OmniSharpSublime.sublime-settings",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/BlabberApp.sublime-project",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw05/README.md",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw04/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/MySqlBlabRepositoryTest.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlBlabRepository.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlPlugin.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/.gitignore",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/BlabTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/UserTests.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/Blab.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IEntity.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/User.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/BaseEntity.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/DataStore.UnitTest/Plugins/MySqlPluginTests.cs",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/MySqlPlugin.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Registration.cshtml.cs",
+		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/User/OmniSharpSublime.sublime-settings",
+		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/BlabberApp.sublime-project",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Error.cshtml",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Privacy.cshtml.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Error.cshtml.cs",
@@ -438,7 +459,6 @@
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Program.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Properties/launchSettings.json",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Client.csproj",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Entities/User.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Controllers/BlabsController.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Controllers/WeatherForecastController.cs",
@@ -446,7 +466,6 @@
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/WeatherForecast.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/Properties/launchSettings.json",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/WebApi/appsettings.json",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw04/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/Assignments/hw03/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/hw03/README.md",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp-CeciHarv/DataStoreTest/Plugins/MySqlPluginTests.cs",
@@ -465,10 +484,7 @@
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemUserRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/DataStore.csproj",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemGenericRepository.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/UserTests.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/BlabTests.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/tests/Domain.UnitTest/Entities/BaseEntityTests.cs",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IEntity.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Plugins/InMemoryRepository.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Domain/Common/Interfaces/IValueObject.cs",
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/DataStore/Exceptions/BlabAdapterExceptions.cs",
@@ -494,7 +510,6 @@
 		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/Domain/Interfaces/IID.cs",
 		"/Users/stringhamdb/Library/Application Support/Sublime Text/Packages/User/Terminal.sublime-settings",
 		"/Users/stringhamdb/Documents/GitHub/daoyinchuan.github.io/content/links.md",
-		"/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/.gitignore",
 		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/README.md",
 		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/Makefile",
 		"/Users/stringhamdb/go/src/github.com/dbs67/ghutil/cmd/list.go",
@@ -544,8 +559,7 @@
 		"/Users/stringhamdb/go/src/github.com/dbs67/assignment-05-donbstringham/main.go",
 		"/Users/stringhamdb/go/src/github.com/donbstringham/assignment-05-donbstringham/cmd/crawl.go",
 		"/Users/stringhamdb/go/src/github.com/donbstringham/assignment-05-donbstringham/main.go",
-		"/Users/stringhamdb/.zshenv",
-		"/Users/stringhamdb/Documents/GitHub/cs3210-fall2021/assignment-05-donbstringham/.env"
+		"/Users/stringhamdb/.zshenv"
 	],
 	"find":
 	{
@@ -565,6 +579,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"System",
 			"MyApp",
 			"Blab",
 			"this.buffer",
@@ -592,116 +607,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/Client/Pages/Registration.cshtml.cs",
-					"selected": true,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1308,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								290,
-								290
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": false,
-							"git_gutter_is_enabled": true,
-							"lsp_uri": "file:///Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp/src/Client/Pages/Registration.cshtml.cs",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -809,15 +714,15 @@
 	"selected_group": 0,
 	"settings":
 	{
-		"_vintageous_last_char_search": "D",
-		"_vintageous_last_char_search_command": "vi_big_f",
+		"_vintageous_last_char_search": "i",
+		"_vintageous_last_char_search_command": "vi_t",
 		"_vintageous_reset_during_init": true
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 257.0,
+	"side_bar_width": 238.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,12 +1,13 @@
 using Domain.Common.Interfaces;
+
 using System.Net.Mail;
 
 namespace Domain.Entities;
 
 public class User : IEntity
 {
-    public DateTime DttmCreated {get; set;}
-    public DateTime DttmLastLogin { get; set;}
+    public DateTime DttmCreated { get; set; }
+    public DateTime DttmLastLogin { get; set; }
     public MailAddress? Email { get; set; }
     public string? Username { get; set; }
     public string? FirstName { get; set; }

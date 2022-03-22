@@ -24,16 +24,17 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
         try
         {
             _cmd.Connection.Open();
-            // TODO SQL will change.
             _cmd.CommandText = "INSERT INTO " + _srcname +
-            " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
-            " (?, ?, ?, ?, ?)";
+            " (sys_id, dttm_created, dttm_lastlogin, email, username, first_name, last_name) VALUES" +
+            " (?, ?, ?, ?, ?, ?, ?)";
+            _cmd.Parameters.Clear();
             _cmd.Parameters.AddWithValue("param1", user.Id);
-            _cmd.Parameters.AddWithValue("param2", user.DttmLastLogin);
-            _cmd.Parameters.AddWithValue("param3", user.Email);
-            _cmd.Parameters.AddWithValue("param4", user.Username);
-            _cmd.Parameters.AddWithValue("param5", user.FirstName);
-            _cmd.Parameters.AddWithValue("param6", user.LastName);
+            _cmd.Parameters.AddWithValue("param2", user.DttmCreated);
+            _cmd.Parameters.AddWithValue("param3", user.DttmLastLogin);
+            _cmd.Parameters.AddWithValue("param4", user.Email);
+            _cmd.Parameters.AddWithValue("param5", user.Username);
+            _cmd.Parameters.AddWithValue("param6", user.FirstName);
+            _cmd.Parameters.AddWithValue("param7", user.LastName);
 
             _cmd.ExecuteNonQuery();
         }
@@ -61,13 +62,16 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
             _cmd.Connection.Open();
 
             // TODO SQL will change.
-            _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr " +
+            _cmd.CommandText = "SELECT sys_id, email, username, first_name, last_name " + 
             "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
             "LIKE '" + id + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User res = new (reader.GetString(4), "foo@bar.com") {Id = new Guid(reader.GetString(0))};
+            User res = new (reader.GetString(2), reader.GetString(1))
+            {
+                Id = new Guid(reader.GetString(0))
+            };
 
             return res;
         }
