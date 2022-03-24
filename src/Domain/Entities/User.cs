@@ -14,7 +14,7 @@ public class User : IEntity
     public string? LastName { get; set; }
     public Guid Id { get; set; }
 
-    public User(string username, string email)
+    public User(string? username, string? email)
     {
         DttmCreated = DttmLastLogin = DateTime.Now;
         Username = username;

@@ -1,9 +1,10 @@
+using System.Data;
 using Domain.Common.Interfaces;
 using Domain.Entities;
-
 using MySql.Data.MySqlClient;
 
 namespace DataStore.Plugins;
+
 public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 {
     private readonly MySqlCommand _cmd;
@@ -22,11 +23,13 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
     {
         try
         {
-            _cmd.Connection.Open();
+            if (_cmd.Connection.State == ConnectionState.Closed)
+                _cmd.Connection.Open();
 
             _cmd.CommandText = "INSERT INTO " + _srcname +
-            " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
-            " (?, ?, ?, ?, ?)";
+                               " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
+                               " (?, ?, ?, ?, ?)";
+            _cmd.Parameters.Clear();
             _cmd.Parameters.AddWithValue("param1", blab.Id);
             _cmd.Parameters.AddWithValue("param2", blab.DttmCreated);
             _cmd.Parameters.AddWithValue("param3", blab.DttmModified);
@@ -49,28 +52,50 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
     public IEnumerable<Blab> GetAll()
     {
-        throw new NotImplementedException();
+        if (_cmd.Connection.State == ConnectionState.Closed)
+            _cmd.Connection.Open();
+        _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr FROM " + _srcname;
+
+        var reader = _cmd.ExecuteReader();
+        List<Blab> buf = new();
+
+        while (reader.Read())
+        {
+            Blab b = new(reader.GetString(3), reader.GetString(4));
+            {
+                b.DttmCreated = Convert.ToDateTime(reader.GetString(1));
+            }
+
+            buf.Add(b);
+        }
+        
+        reader.Close();
+
+        return buf;
     }
 
     public Blab GetById(Guid Id)
     {
         try
         {
-            _cmd.Connection.Open();
+            if (_cmd.Connection.State == ConnectionState.Closed)
+                _cmd.Connection.Open();
 
             _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr " +
-            "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
-            "LIKE '" + Id + "'";
+                               "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
+                               "LIKE '" + Id + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User u = new User(reader.GetString(4), "foo@bar.com");
-            Blab res = new Blab(reader.GetString(3), "foobar");
+            //TODO Fix this section
+            User u = new(reader.GetString(4), "foo@bar.com");
+            Blab res = new(reader.GetString(3), "foobar");
             res.Id = new Guid(reader.GetString(0));
+            reader.Close();
 
             return res;
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+        catch (MySqlException ex)
         {
             throw new Exception(
                 "Error " + ex.Number + " has occurred: " + ex.Message
@@ -96,11 +121,12 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
     {
         try
         {
-            _cmd.Connection.Open();
+            if (_cmd.Connection.State == ConnectionState.Closed)
+                _cmd.Connection.Open();
             _cmd.CommandText = "TRUNCATE " + _srcname;
             _cmd.ExecuteNonQuery();
         }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
+        catch (MySqlException ex)
         {
             throw new Exception(
                 "Error " + ex.Number + " has occurred: " + ex.Message

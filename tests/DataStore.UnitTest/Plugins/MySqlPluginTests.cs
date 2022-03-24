@@ -23,32 +23,4 @@ public class MySqlPluginTest
         // Assert
         Assert.AreEqual(e.ToString(), a.ToString());
     }
-
-    [TestMethod]
-    public void MySqlPluginTest_Connect_NoException()
-    {
-        // Arrange
-        MySqlPlugin a = new(_dsn);
-        // Act and Assert
-        try
-        {
-            a.Connect();
-        }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
-        {
-            Assert.Fail("Expected NO exception, but got: " + ex.Message);
-        }
-
-        Assert.IsTrue(true);
-    }
-
-    [TestMethod]
-    public void MySqlPluginTest_Connect_Exception()
-    {
-        // Arrange
-        string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
-        MySqlPlugin a = new(dsn);
-        // Act and Assert
-        Assert.ThrowsException<MySql.Data.MySqlClient.MySqlException>(() => a.Connect());
-    }
 }

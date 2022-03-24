@@ -1,3 +1,4 @@
+using System.Data;
 
 using Domain.Common.Interfaces;
 using Domain.Entities;
@@ -5,6 +6,7 @@ using Domain.Entities;
 using MySql.Data.MySqlClient;
 
 namespace DataStore.Plugins;
+
 public class MySqlUserRepository : MySqlPlugin, IUserRepository
 {
     private readonly MySqlCommand _cmd;
@@ -23,10 +25,11 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
     {
         try
         {
-            _cmd.Connection.Open();
+            if (_cmd.Connection.State == ConnectionState.Closed)
+                _cmd.Connection.Open();
             _cmd.CommandText = "INSERT INTO " + _srcname +
-            " (sys_id, dttm_created, dttm_lastlogin, email, username, first_name, last_name) VALUES" +
-            " (?, ?, ?, ?, ?, ?, ?)";
+                               " (sys_id, dttm_created, dttm_lastlogin, email, username, first_name, last_name) VALUES" +
+                               " (?, ?, ?, ?, ?, ?, ?)";
             _cmd.Parameters.Clear();
             _cmd.Parameters.AddWithValue("param1", user.Id);
             _cmd.Parameters.AddWithValue("param2", user.DttmCreated);
@@ -52,26 +55,41 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
     public IEnumerable<User> GetAll()
     {
-        throw new NotImplementedException();
+        if (_cmd.Connection.State == ConnectionState.Closed)
+            _cmd.Connection.Open();
+        _cmd.CommandText = "SELECT sys_id, email, username, first_name, last_name FROM " + _srcname;
+        var reader = _cmd.ExecuteReader();
+        List<User> buf = new();
+
+        while (reader.Read())
+        {
+            User u = new(reader.GetString(2), reader.GetString(1))
+            {
+                Id = new Guid(reader.GetString(0)), FirstName = reader.GetString(3), LastName = reader.GetString(4)
+            };
+
+            buf.Add(u);
+        }
+        reader.Close();
+
+        return buf;
     }
 
     public User GetById(Guid id)
     {
         try
         {
-            _cmd.Connection.Open();
+            if (_cmd.Connection.State == ConnectionState.Closed)
+                _cmd.Connection.Open();
 
-            // TODO SQL will change.
-            _cmd.CommandText = "SELECT sys_id, email, username, first_name, last_name " + 
-            "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
-            "LIKE '" + id + "'";
+            _cmd.CommandText = "SELECT sys_id, email, username, first_name, last_name " +
+                               "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
+                               "LIKE '" + id + "'";
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User res = new (reader.GetString(2), reader.GetString(1))
-            {
-                Id = new Guid(reader.GetString(0))
-            };
+            User res = new(reader.GetString(2), reader.GetString(1)) {Id = new Guid(reader.GetString(0))};
+            reader.Close();
 
             return res;
         }
@@ -101,7 +119,8 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
     {
         try
         {
-            _cmd.Connection.Open();
+            if (_cmd.Connection.State == ConnectionState.Closed)
+                _cmd.Connection.Open();
             // TODO SQL will change.
             _cmd.CommandText = "TRUNCATE " + _srcname;
             _cmd.ExecuteNonQuery();
@@ -122,6 +141,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
     {
         throw new NotImplementedException();
     }
+
     public User GetByUsername(string username)
     {
         throw new NotImplementedException();

@@ -37,33 +37,6 @@ public class MySqlBlabRepositoryTest
     }
 
     [TestMethod]
-    public void MySqlBlabRepository_Connect_NoException()
-    {
-        // Arrange
-        MySqlBlabRepository a = new(_dsn);
-        // Act and Assert
-        try
-        {
-            a.Connect();
-        }
-        catch (System.Exception ex)
-        {
-            Assert.Fail("Expected NO exception, but got: " + ex.Message);
-        }
-        Assert.IsTrue(true);
-    }
-
-    [TestMethod]
-    public void MySqlBlabRepositoryTest_Connect_Exception()
-    {
-        // Arrange
-        string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
-        MySqlBlabRepository a = new(dsn);
-        // Act and Assert
-        Assert.ThrowsException<MySql.Data.MySqlClient.MySqlException>(() => a.Connect());
-    }
-
-    [TestMethod]
     public void MySqlBlabRepositoryTest_Insert()
     {
         // Arrange
@@ -84,14 +57,16 @@ public class MySqlBlabRepositoryTest
          public void MySqlBlabRepositoryTest_InsertTwo()
          {
              // Arrange
-             Blab e = new(
+             Blab e1 = new(
+                 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
+                 "foobar"
+             );
+             Blab e2 = new(
                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
                  "foobar"
              );
              // Act
-             _h.Add(e);
-             Blab a = _h.GetById(e.Id);
-             Assert.AreEqual(e.Content, a.Content);
-             Assert.AreEqual(e.Username, a.Username);
+             _h.Add(e1);
+             _h.Add(e2);
          }
 }

@@ -10,6 +10,7 @@ builder.Services.AddRazorPages();
 
 // Dependency Injection Container LOL
 // builder.Services.AddSingleton<IUserRepository, InMemUserRepository>();
+builder.Services.AddSingleton<IBlabRepository, MySqlBlabRepository>(r => new MySqlBlabRepository(dsn));
 builder.Services.AddSingleton<IUserRepository, MySqlUserRepository>(r => new MySqlUserRepository(dsn));
 
 var app = builder.Build();

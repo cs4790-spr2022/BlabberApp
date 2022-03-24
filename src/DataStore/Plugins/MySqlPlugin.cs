@@ -2,26 +2,15 @@ namespace DataStore.Plugins;
 
 public class MySqlPlugin
 {
-    public MySql.Data.MySqlClient.MySqlConnection? Conn { get; }
-    private string connectionString; //Also know as DSN
+    public readonly MySql.Data.MySqlClient.MySqlConnection Conn;
 
     public MySqlPlugin(string connStr)
     {
-        this.connectionString = connStr;
-        this.Conn = new MySql.Data.MySqlClient.MySqlConnection(
-            this.connectionString
-        );
+        this.Conn = new MySql.Data.MySqlClient.MySqlConnection(connStr);
     }
 
-    public void Connect()
+    public void Dispose()
     {
-        try
-        {
-            Conn?.Open();
-        }
-        catch (MySql.Data.MySqlClient.MySqlException ex)
-        {
-            throw ex;
-        }
+        this.Conn.Close();
     }
 }

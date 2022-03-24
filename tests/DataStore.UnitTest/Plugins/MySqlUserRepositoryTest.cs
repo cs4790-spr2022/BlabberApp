@@ -40,34 +40,6 @@ public class MySqlUserRepositoryTest
     }
 
     [TestMethod]
-    public void MySqlUserRepository_Connect_NoException()
-    {
-        // Arrange
-        MySqlUserRepository a = new(_dsn);
-        // Act and Assert
-        try
-        {
-            a.Connect();
-        }
-        catch (System.Exception ex)
-        {
-            Assert.Fail("Expected NO exception, but got: " + ex.Message);
-        }
-
-        Assert.IsTrue(true);
-    }
-
-    [TestMethod]
-    public void MySqlUserRepository_Connect_Exception()
-    {
-        // Arrange
-        string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=blabber";
-        MySqlUserRepository a = new(dsn);
-        // Act and Assert
-        Assert.ThrowsException<MySql.Data.MySqlClient.MySqlException>(() => a.Connect());
-    }
-
-    [TestMethod]
     public void MySqlUserRepository_Insert()
     {
         // Arrange
