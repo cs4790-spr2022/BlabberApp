@@ -8,7 +8,7 @@ namespace DataStore.Plugins;
 public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 {
     private readonly MySqlCommand _cmd;
-    private static string _dbname = "`orlandomarshall`";
+    private static string _dbname = "`donstringham`";
     private static string _tbname = "`blabs`";
     private readonly string _srcname = _dbname + "." + _tbname;
 
@@ -54,7 +54,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
     {
         if (_cmd.Connection.State == ConnectionState.Closed)
             _cmd.Connection.Open();
-        _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, username FROM " + _srcname;
+        _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr FROM " + _srcname;
 
         var reader = _cmd.ExecuteReader();
         List<Blab> buf = new();

@@ -1,7 +1,7 @@
 using Domain.Common.Interfaces;
 using DataStore.Plugins;
 
-const string dsn = "server=143.110.159.170;uid=orlandomarshall;pwd=letmein;database=orlandomarshall";
+const string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
 
 var builder = WebApplication.CreateBuilder(args);
 

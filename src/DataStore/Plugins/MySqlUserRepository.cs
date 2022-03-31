@@ -10,7 +10,7 @@ namespace DataStore.Plugins;
 public class MySqlUserRepository : MySqlPlugin, IUserRepository
 {
     private readonly MySqlCommand _cmd;
-    private static string _dbname = "`orlandomarshall`";
+    private static string _dbname = "`donstringham`";
     private static string _tbname = "`user`";
     private readonly string _srcname = _dbname + "." + _tbname;
 
