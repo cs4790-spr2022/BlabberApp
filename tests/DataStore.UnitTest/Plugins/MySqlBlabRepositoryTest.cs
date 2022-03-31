@@ -30,7 +30,8 @@ public class MySqlBlabRepositoryTest
         // Assert
         Assert.AreEqual(_blab.ToString(), a.ToString());
     }
-
+    
+    
     [TestMethod]
     public void MySqlBlabRepositoryTest_Insert()
     {
