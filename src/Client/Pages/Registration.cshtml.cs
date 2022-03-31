@@ -1,3 +1,5 @@
+using System.Net.Mail;
+
 using Domain.Common.Interfaces;
 using Domain.Entities;
 
@@ -26,7 +28,12 @@ public class RegistrationModel : PageModel
 
     public void OnPost()
     {
-        User usr = new(Username, Email) {FirstName = FirstName, LastName = LastName};
+        if(String.IsNullOrEmpty(Username) || String.IsNullOrEmpty(Email)) return;
+        
+        User usr = new(Username, Email)
+        {
+            FirstName = FirstName, LastName = LastName
+        };
 
         _repo.Add(usr);
 

@@ -22,6 +22,7 @@ public class FeedModel : PageModel
     public void OnGet()
     {
         Blabs = (List<Blab>) _repo.GetAll();
+        Blabs = Blabs.OrderByDescending(b => b.DttmCreated).ToList();
     }
 
     public void OnPost()

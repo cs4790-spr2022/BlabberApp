@@ -8,7 +8,7 @@ namespace DataStore.Plugins;
 public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 {
     private readonly MySqlCommand _cmd;
-    private static string _dbname = "`donstringham`";
+    private static string _dbname = "`orlandomarshall`";
     private static string _tbname = "`blabs`";
     private readonly string _srcname = _dbname + "." + _tbname;
 
@@ -27,7 +27,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
                 _cmd.Connection.Open();
 
             _cmd.CommandText = "INSERT INTO " + _srcname +
-                               " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
+                               " (sys_id, dttm_created, dttm_modified, content, username) VALUES" +
                                " (?, ?, ?, ?, ?)";
             _cmd.Parameters.Clear();
             _cmd.Parameters.AddWithValue("param1", blab.Id);
@@ -54,7 +54,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
     {
         if (_cmd.Connection.State == ConnectionState.Closed)
             _cmd.Connection.Open();
-        _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr FROM " + _srcname;
+        _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, username FROM " + _srcname;
 
         var reader = _cmd.ExecuteReader();
         List<Blab> buf = new();
@@ -73,7 +73,8 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
         return buf;
     }
-
+    
+    
     public Blab GetById(Guid Id)
     {
         try
@@ -109,12 +110,48 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
     public void Update(Blab blab)
     {
-        throw new NotImplementedException();
+        try
+        {
+            _cmd.Connection.Open();
+
+            _cmd.CommandText = string.Format("UPDATE " + _srcname + " SET Content = '{0}', Username = '{1}', Dttm_Created = '{2}'," +
+                                             " Dttm_modified = '{3}' " +
+                                             "WHERE Id LIKE '{4}'",
+                blab.Content, blab.Username, blab.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"), blab.DttmModified.ToString("yyyy-MM-dd HH:mm:ss"), blab.Id);
+            // System.Diagnostics.Debug.WriteLine(_cmd.CommandText);
+            var reader = _cmd.ExecuteNonQuery();
+        }
+        catch (MySqlException ex)
+        {
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
+        }
+        finally
+        {
+            _cmd.Connection.Close();
+        }
     }
 
     public void Remove(Blab blab)
     {
-        throw new NotImplementedException();
+        try
+        {
+            _cmd.Connection.Open();
+            _cmd.CommandText = "DELETE FROM " + _srcname + " WHERE Id LIKE '" + blab.Id + "'";
+            // System.Diagnostics.Debug.WriteLine(_cmd.CommandText);
+            var reader = _cmd.ExecuteNonQuery();
+        }
+        catch (MySqlException ex)
+        {
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
+        }
+        finally
+        {
+            _cmd.Connection.Close();
+        }
     }
 
     public void RemoveAll()
@@ -140,11 +177,67 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
     public IEnumerable<Blab> GetByUser(User usr)
     {
-        throw new NotImplementedException();
+        try
+        {
+            List<Blab> blabs = new List<Blab>();
+            _cmd.Connection.Open();
+            _cmd.CommandText = "SELECT * FROM " + _srcname + " WHERE Username LIKE '" + usr.Username + "'";
+
+            MySqlDataReader reader = _cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Blab blab = new Blab("content", "user");
+                blab.Id = reader.GetGuid(1);
+                blab.Content = reader.GetString(2);
+                blab.Username = reader.GetString(3);
+                blab.DttmCreated = reader.GetDateTime(4);
+                blab.DttmModified = reader.GetDateTime(5);
+                blabs.Add(blab);
+            }
+            return blabs;
+        }
+        catch (MySql.Data.MySqlClient.MySqlException ex)
+        {
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
+        }
+        finally
+        {
+            _cmd.Connection.Close();
+        }
     }
 
     public IEnumerable<Blab> GetByDateTime(DateTime dttm)
     {
-        throw new NotImplementedException();
+        try
+        {
+            List<Blab> blabs = new List<Blab>();
+            _cmd.Connection.Open();
+            _cmd.CommandText = "SELECT * FROM " + _srcname + " WHERE Dttm_created LIKE '" + dttm.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+
+            MySqlDataReader reader = _cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Blab blab = new Blab("content", "user");
+                blab.Id = reader.GetGuid(1);
+                blab.Content = reader.GetString(2);
+                blab.Username = reader.GetString(3);
+                blab.DttmCreated = reader.GetDateTime(4);
+                blab.DttmModified = reader.GetDateTime(5);
+                blabs.Add(blab);
+            }
+            return blabs;
+        }
+        catch (MySql.Data.MySqlClient.MySqlException ex)
+        {
+            throw new Exception(
+                "Error " + ex.Number + " has occurred: " + ex.Message
+            );
+        }
+        finally
+        {
+            _cmd.Connection.Close();
+        }
     }
 }

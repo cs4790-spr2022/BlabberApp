@@ -1,6 +1,14 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ab2c5bc3_002D45e2_002D46c2_002D9310_002De01f6cb00e4b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="MySqlPluginTest_Connect_Exception" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Project Location="/Users/stringhamdb/Documents/GitHub/cs4790-spr2022/BlabberApp" Presentation="&amp;lt;tests&amp;gt;" /&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6de086b1_002D71cc_002D41cc_002Dab62_002D533753f436eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestUpdate" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::1930D7C9-0021-4B8A-9CD7-7D248F6BCAE0::net6.0::DataStore.UnitTest.Plugins.MySqlBlabRepositoryTest.TestUpdate&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::1930D7C9-0021-4B8A-9CD7-7D248F6BCAE0::net6.0::DataStore.UnitTest.Plugins.MySqlBlabRepositoryTest.TestDelete&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::1930D7C9-0021-4B8A-9CD7-7D248F6BCAE0::net6.0::DataStore.UnitTest.Plugins.MySqlBlabRepositoryTest.AddBlabTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::1930D7C9-0021-4B8A-9CD7-7D248F6BCAE0::net6.0::DataStore.UnitTest.Plugins.MySqlBlabRepositoryTest.TestRemoveAll&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
+	
+	
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=donstringham/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Dttm/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
