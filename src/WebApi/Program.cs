@@ -1,4 +1,5 @@
 using DataStore.Plugins;
+
 using Domain.Common.Interfaces;
 
 const string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
@@ -6,7 +7,7 @@ const string dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// builder.Services.AddSingleton<IUserRepository, InMemUserRepository>();
+// builder.Services.AddSingleton<IBlabRepository, InMemBlabRepository>();
 builder.Services.AddSingleton<IBlabRepository, MySqlBlabRepository>(r => new MySqlBlabRepository(dsn));
 builder.Services.AddSingleton<IUserRepository, MySqlUserRepository>(r => new MySqlUserRepository(dsn));
 

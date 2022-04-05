@@ -1,6 +1,8 @@
 using System.Data;
+
 using Domain.Common.Interfaces;
 using Domain.Entities;
+
 using MySql.Data.MySqlClient;
 
 namespace DataStore.Plugins;
@@ -27,7 +29,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
                 _cmd.Connection.Open();
 
             _cmd.CommandText = "INSERT INTO " + _srcname +
-                               " (sys_id, dttm_created, dttm_modified, content, username) VALUES" +
+                               " (sys_id, dttm_created, dttm_modified, content, usr) VALUES" +
                                " (?, ?, ?, ?, ?)";
             _cmd.Parameters.Clear();
             _cmd.Parameters.AddWithValue("param1", blab.Id);
@@ -68,14 +70,14 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
             buf.Add(b);
         }
-        
+
         reader.Close();
 
         return buf;
     }
-    
-    
-    public Blab GetById(Guid Id)
+
+
+    public Blab GetById(Guid id)
     {
         try
         {
@@ -84,14 +86,20 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
 
             _cmd.CommandText = "SELECT sys_id, dttm_created, dttm_modified, content, usr " +
                                "FROM " + _srcname + " WHERE " + _srcname + ".`sys_id` " +
-                               "LIKE '" + Id + "'";
+                               "LIKE '" + id + "'";
 
             var reader = _cmd.ExecuteReader();
-            reader.Read();
-            //TODO Fix this section
-            User u = new(reader.GetString(4), "foo@bar.com");
-            Blab res = new(reader.GetString(3), "foobar");
-            res.Id = new Guid(reader.GetString(0));
+
+            if (!reader.Read())
+            {
+                return new Blab("", "");
+            }
+
+            Blab res = new(reader.GetString(3), reader.GetString(4))
+            {
+                Id = reader.GetGuid(0), DttmCreated = reader.GetDateTime(1), DttmModified = reader.GetDateTime(2)
+            };
+
             reader.Close();
 
             return res;
@@ -114,10 +122,12 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
         {
             _cmd.Connection.Open();
 
-            _cmd.CommandText = string.Format("UPDATE " + _srcname + " SET Content = '{0}', Username = '{1}', Dttm_Created = '{2}'," +
+            _cmd.CommandText = string.Format("UPDATE " + _srcname +
+                                             " SET Content = '{0}', Username = '{1}', Dttm_Created = '{2}'," +
                                              " Dttm_modified = '{3}' " +
                                              "WHERE Id LIKE '{4}'",
-                blab.Content, blab.Username, blab.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"), blab.DttmModified.ToString("yyyy-MM-dd HH:mm:ss"), blab.Id);
+                blab.Content, blab.Username, blab.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"),
+                blab.DttmModified.ToString("yyyy-MM-dd HH:mm:ss"), blab.Id);
             // System.Diagnostics.Debug.WriteLine(_cmd.CommandText);
             var reader = _cmd.ExecuteNonQuery();
         }
@@ -194,6 +204,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
                 blab.DttmModified = reader.GetDateTime(5);
                 blabs.Add(blab);
             }
+
             return blabs;
         }
         catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -208,13 +219,19 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
         }
     }
 
+    public IEnumerable<Blab> GetAllSortedBy(string colName, string order)
+    {
+        throw new NotImplementedException();
+    }
+
     public IEnumerable<Blab> GetByDateTime(DateTime dttm)
     {
         try
         {
             List<Blab> blabs = new List<Blab>();
             _cmd.Connection.Open();
-            _cmd.CommandText = "SELECT * FROM " + _srcname + " WHERE Dttm_created LIKE '" + dttm.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+            _cmd.CommandText = "SELECT * FROM " + _srcname + " WHERE Dttm_created LIKE '" +
+                               dttm.ToString("yyyy-MM-dd HH:mm:ss") + "'";
 
             MySqlDataReader reader = _cmd.ExecuteReader();
             while (reader.Read())
@@ -227,6 +244,7 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
                 blab.DttmModified = reader.GetDateTime(5);
                 blabs.Add(blab);
             }
+
             return blabs;
         }
         catch (MySql.Data.MySqlClient.MySqlException ex)

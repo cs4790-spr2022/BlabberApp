@@ -1,0 +1,21 @@
+@page
+@model Client.Pages.BlabModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Blab";
+}
+
+<div id="form">
+    <h1>Create Blab</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="UsernameInput">Username</label>
+            <input type="text" class="form-control" asp-for="UserNameInput" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+            <label for="BlabInput">Compose Blab</label>
+            <textarea class="form-control" asp-for="BlabInput" placeholder="Write a Blab!" ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+</div>

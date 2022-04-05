@@ -17,7 +17,7 @@ VALUES ("712646ae-7ce0-416f-9c25-55c7bbe95fce", "2022-03-14 09:09:09", "2022-03-
 
 SELECT sys_id, dttm_created, dttm_modified, content, usr
 FROM `donstringham`.`blabs`
-WHERE `donstringham`.`blabs`.`sys_id` LIKE "9a31a7f8-8bd4-45e6-ba8f-4d5bb47588bd";
+WHERE `donstringham`.`blabs`.`sys_id` LIKE "634f8072-d897-4e3f-a59d-a69bb541062b";
 
 SELECT *
 FROM `donstringham`.`blabs`;

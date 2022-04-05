@@ -1,5 +1,3 @@
-using System.Net.Mail;
-
 using Domain.Common.Interfaces;
 using Domain.Entities;
 
@@ -28,19 +26,16 @@ public class RegistrationModel : PageModel
 
     public void OnPost()
     {
-        if(String.IsNullOrEmpty(Username) || String.IsNullOrEmpty(Email)) return;
-        
-        User usr = new(Username, Email)
-        {
-            FirstName = FirstName, LastName = LastName
-        };
+        if (String.IsNullOrEmpty(Username) || String.IsNullOrEmpty(Email)) return;
+
+        User usr = new(Username, Email) {FirstName = FirstName, LastName = LastName};
 
         _repo.Add(usr);
 
         _log.LogInformation("Add user into repo");
 
         IEnumerable<User> users = _repo.GetAll();
-        
+
         foreach (var u in users)
         {
             if (u.Username != null)
