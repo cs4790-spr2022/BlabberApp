@@ -3,13 +3,9 @@ using Domain.Entities;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Controllers;
+using WebApi.Dto;
 
-public class BlabDto
-{
-    public string? Username { get; set; }
-    public string? Content { get; set; }
-}
+namespace WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -35,7 +31,7 @@ public class BlabsController : ControllerBase
     [Route("{id:guid}")]
     public IActionResult GetById([FromRoute] Guid id)
     {
-        _logger.LogInformation("Retrieving blab " + id.ToString());
+        _logger.LogInformation("Retrieving blab " + id);
         var b = _repo.GetById(id);
         if (b.Username is "")
             return NotFound();
@@ -61,7 +57,7 @@ public class BlabsController : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LogError($"{ex.Message}");
+            _logger.LogError(ex.Message);
             return StatusCode(500, "Internal server error");
         }
     }
