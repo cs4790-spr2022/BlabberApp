@@ -19,9 +19,9 @@ public class BlabsControllerTest
     public void TestInstantiation()
     {
         // Arrange
-        var e = new BlabsController(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabsController e = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
         // Act
-        var a = new BlabsController(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabsController a = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
         // Assert
         Assert.AreEqual(e.GetType(), a.GetType());
         Assert.IsInstanceOfType(e, typeof(BlabsController));
@@ -31,7 +31,7 @@ public class BlabsControllerTest
     public void TestGetAllEmpty()
     {
         // Arrange
-        var h = new BlabsController(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabsController h = new BlabsController(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
         // Act
         var a = h.GetAll();
         // Assert
@@ -42,8 +42,8 @@ public class BlabsControllerTest
     public void TestPostAndGetAll()
     {
         // Arrange
-        var h = new BlabsController(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
-        var d = new BlabDto("fubar", "ipsum");
+        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabDto d = new("fubar", "ipsum");
         // Act
         var a = h.Post(d);
         // Assert
@@ -55,8 +55,8 @@ public class BlabsControllerTest
     public void TestPostAndGetById()
     {
         // Arrange
-        var h = new BlabsController(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
-        var d = new BlabDto("fubar", "ipsum");
+        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabDto d = new("fubar", "ipsum");
         // Act
         h.Post(d);
         var b = h.GetAll();

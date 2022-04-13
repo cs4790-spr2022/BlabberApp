@@ -70,6 +70,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
             buf.Add(u);
         }
+
         reader.Close();
 
         return buf;
@@ -111,14 +112,14 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
         {
             _cmd.Connection.Open();
 
-            _cmd.CommandText = string.Format("UPDATE " + _srcname + " SET First_Name = '{0}', Last_Name = '{1}', Email ='{2}'," +
-                                             " Username = '{3}', DateTimeCreated = '{4}', DateTimeLastLogin = '{5}' "+
+            _cmd.CommandText = string.Format("UPDATE " + _srcname +
+                                             " SET First_Name = '{0}', Last_Name = '{1}', Email ='{2}'," +
+                                             " Username = '{3}', DateTimeCreated = '{4}', DateTimeLastLogin = '{5}' " +
                                              "WHERE DomainID LIKE + '{6}'",
-                u.FirstName, u.LastName, u.Email, u.Username,u.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"), u.DttmLastLogin.ToString("yyyy-MM-dd HH:mm:ss"), u.Id);
+                u.FirstName, u.LastName, u.Email, u.Username, u.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"),
+                u.DttmLastLogin.ToString("yyyy-MM-dd HH:mm:ss"), u.Id);
             // System.Diagnostics.Debug.WriteLine(_cmd.CommandText);
             var reader = _cmd.ExecuteNonQuery();
-
-        
         }
         catch (MySqlException ex)
         {
@@ -187,13 +188,13 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
             var reader = _cmd.ExecuteReader();
 
-            if(reader.HasRows == false) return  null;
+            if (reader.HasRows == false) return null;
 
             User readUser = new User("doesn't", "matter@mail.com");
             reader.Read();
             readUser.Id = reader.GetGuid(1);
-            if(!reader.IsDBNull(2))readUser.FirstName = reader.GetString(2);
-            if(!reader.IsDBNull(3))readUser.LastName = reader.GetString(3);
+            if (!reader.IsDBNull(2)) readUser.FirstName = reader.GetString(2);
+            if (!reader.IsDBNull(3)) readUser.LastName = reader.GetString(3);
             readUser.Email = new System.Net.Mail.MailAddress(reader.GetString(4));
             readUser.Username = reader.GetString(5);
             readUser.DttmCreated = reader.GetDateTime(6);
@@ -223,13 +224,13 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
             var reader = _cmd.ExecuteReader();
 
-            if(reader.HasRows == false) return  null;
+            if (reader.HasRows == false) return null;
 
             User readUser = new User("doesn't", "matter@test.com");
             reader.Read();
             readUser.Id = reader.GetGuid(1);
-            if(!reader.IsDBNull(2))readUser.FirstName = reader.GetString(2);
-            if(!reader.IsDBNull(3))readUser.LastName = reader.GetString(3);
+            if (!reader.IsDBNull(2)) readUser.FirstName = reader.GetString(2);
+            if (!reader.IsDBNull(3)) readUser.LastName = reader.GetString(3);
             readUser.Email = new System.Net.Mail.MailAddress(reader.GetString(4));
             readUser.Username = reader.GetString(5);
             readUser.DttmCreated = reader.GetDateTime(6);
