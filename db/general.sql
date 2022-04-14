@@ -52,3 +52,4 @@ SELECT *
 FROM `donstringham`.`user`;
 
 TRUNCATE `donstringham`.`user`;
+

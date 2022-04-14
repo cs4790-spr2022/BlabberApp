@@ -123,13 +123,13 @@ public class MySqlBlabRepository : MySqlPlugin, IBlabRepository
             _cmd.Connection.Open();
 
             _cmd.CommandText = string.Format("UPDATE " + _srcname +
-                                             " SET Content = '{0}', Username = '{1}', Dttm_Created = '{2}'," +
-                                             " Dttm_modified = '{3}' " +
-                                             "WHERE Id LIKE '{4}'",
+                                             " SET content = '{0}', usr = '{1}', dttm_created = '{2}'," +
+                                             " dttm_modified = '{3}' " +
+                                             "WHERE id LIKE '{4}'",
                 blab.Content, blab.Username, blab.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"),
                 blab.DttmModified.ToString("yyyy-MM-dd HH:mm:ss"), blab.Id);
             // System.Diagnostics.Debug.WriteLine(_cmd.CommandText);
-            var reader = _cmd.ExecuteNonQuery();
+            _cmd.ExecuteNonQuery();
         }
         catch (MySqlException ex)
         {

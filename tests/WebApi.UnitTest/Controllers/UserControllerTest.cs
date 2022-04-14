@@ -13,25 +13,25 @@ using WebApi.Dto;
 namespace WebApi.UnitTest.Controllers;
 
 [TestClass]
-public class BlabsControllerTest
+public class UserControllerTest
 {
     [TestMethod]
     public void TestInstantiation()
     {
         // Arrange
-        BlabsController e = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        UserController e = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
         // Act
-        BlabsController a = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        UserController a = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
         // Assert
         Assert.AreEqual(e.GetType(), a.GetType());
-        Assert.IsInstanceOfType(e, typeof(BlabsController));
+        Assert.IsInstanceOfType(e, typeof(UserController));
     }
 
     [TestMethod]
     public void TestGetAllEmpty()
     {
         // Arrange
-        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        UserController h = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
         // Act
         var a = h.GetAll();
         // Assert
@@ -42,10 +42,10 @@ public class BlabsControllerTest
     public void TestPostAndGetAll()
     {
         // Arrange
-        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
-        BlabDto d = new("fubar", "ipsum");
+        UserController h = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
+        UserDto u = new("fubar", "fubar@example.com", "Fu", "Bar");
         // Act
-        var a = h.Post(d);
+        var a = h.Post(u);
         // Assert
         Assert.AreEqual("Microsoft.AspNetCore.Mvc.CreatedAtRouteResult", a.ToString());
         Assert.AreEqual(1, h.GetAll().Count());
@@ -55,10 +55,10 @@ public class BlabsControllerTest
     public void TestPostAndGetById()
     {
         // Arrange
-        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
-        BlabDto d = new("fubar", "ipsum");
+        UserController h = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
+        UserDto u = new("fubar", "fubar@example.com", "Fu", "Bar");
         // Act
-        h.Post(d);
+        h.Post(u);
         var b = h.GetAll();
         var a = h.GetById(b.First().Id);
         // Assert

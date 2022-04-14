@@ -1,11 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Net.Mail;
 
 using DataStore.Plugins;
-using Domain.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using Domain.Entities;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataStore.UnitTest.Plugins;
 
@@ -17,7 +16,7 @@ public class MySqlBlabRepositoryTest
 
     public MySqlBlabRepositoryTest()
     {
-        _dsn = "server=143.110.159.170;uid=orlandomarshall;pwd=letmein;database=orlandomarshall";
+        _dsn = "server=143.110.159.170;uid=donstringham;pwd=letmein;database=donstringham";
         _blab = new MySqlBlabRepository(_dsn);
     }
 
@@ -30,8 +29,8 @@ public class MySqlBlabRepositoryTest
         // Assert
         Assert.AreEqual(_blab.ToString(), a.ToString());
     }
-    
-    
+
+
     [TestMethod]
     public void MySqlBlabRepositoryTest_Insert()
     {
@@ -48,83 +47,81 @@ public class MySqlBlabRepositoryTest
         Assert.AreEqual(e.Content, a.Content);
         Assert.AreEqual(e.Username, a.Username);
     }
-    
+
     [TestMethod]
-         public void MySqlBlabRepositoryTest_InsertTwo()
-         {
-             // Arrange
-             Blab e1 = new(
-                 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
-                 "foobar"
-             );
-             Blab e2 = new(
-                 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
-                 "foobar"
-             );
-             // Act
-             _blab.Add(e1);
-             _blab.Add(e2);
-         }
+    public void MySqlBlabRepositoryTest_InsertTwo()
+    {
+        // Arrange
+        Blab e1 = new(
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
+            "foobar"
+        );
+        Blab e2 = new(
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
+            "foobar"
+        );
+        // Act
+        _blab.Add(e1);
+        _blab.Add(e2);
+    }
 
-         [TestMethod]
-         public void AddBlabTest()
-         {
-             Blab blab = new Blab("Testing 123!", "User");
-             try
-             {
-                 _blab.Add(blab);
-             }
-             catch(Exception ex)
-             {
-                 Assert.Fail(ex.Message);
-             }
-         }
-         
-         [TestMethod]
-         public void TestUpdate()
-         {
-             Blab blab = new Blab("Some content", "testingUser");
-             blab.Content = "Testing 321";
-             _blab.Update(blab);
+    [TestMethod]
+    public void AddBlabTest()
+    {
+        Blab blab = new Blab("Testing 123!", "User");
+        try
+        {
+            _blab.Add(blab);
+        }
+        catch (Exception ex)
+        {
+            Assert.Fail(ex.Message);
+        }
+    }
 
-             Assert.IsTrue(blab.Content == "Testing 321");
-         }
+    [TestMethod]
+    public void TestUpdate()
+    {
+        Blab b = new("Some content", "testingUser");
+        _blab.Update(b);
 
-         [TestMethod]
-         public void TestRemove()
-         {;
-             Blab blab = new Blab("Content", "Testing 123user") ;
-             try
-             {
-                 _blab.Remove(blab);
-             }
-             catch (Exception e)
-             {
-                 Assert.Fail(e.Message);
-                 Console.WriteLine(e);
-                 throw;
-             }
-            
-         }
+        Assert.IsTrue(b.Content == "Some content");
+    }
 
-         [TestMethod]
-         public void TestRemoveAll()
-         {
-             Blab blab = new Blab("Content", "Testing 123user") ;
-             Blab blab1 = new Blab("Content", "Testing 123user") ;
-             Blab blab2 = new Blab("Content", "Testing 123user") ;
-             Blab blab3 = new Blab("Content", "Testing 123user") ;
-             Blab blab4 = new Blab("Content", "Testing 123user") ;
-             try
-             {
-                 _blab.RemoveAll();
-             }
-             catch (Exception ex)
-             {
-                 Assert.Fail(ex.Message);
-                 Console.WriteLine(ex);
-                 throw;
-             }
-             
-         }
+    [TestMethod]
+    public void TestRemove()
+    {
+        ;
+        Blab blab = new Blab("Content", "Testing 123user");
+        try
+        {
+            _blab.Remove(blab);
+        }
+        catch (Exception e)
+        {
+            Assert.Fail(e.Message);
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    [TestMethod]
+    public void TestRemoveAll()
+    {
+        Blab blab = new Blab("Content", "Testing 123user");
+        Blab blab1 = new Blab("Content", "Testing 123user");
+        Blab blab2 = new Blab("Content", "Testing 123user");
+        Blab blab3 = new Blab("Content", "Testing 123user");
+        Blab blab4 = new Blab("Content", "Testing 123user");
+        try
+        {
+            _blab.RemoveAll();
+        }
+        catch (Exception ex)
+        {
+            Assert.Fail(ex.Message);
+            Console.WriteLine(ex);
+            throw;
+        }
+    }
 }

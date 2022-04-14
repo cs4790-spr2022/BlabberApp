@@ -113,13 +113,12 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
             _cmd.Connection.Open();
 
             _cmd.CommandText = string.Format("UPDATE " + _srcname +
-                                             " SET First_Name = '{0}', Last_Name = '{1}', Email ='{2}'," +
-                                             " Username = '{3}', DateTimeCreated = '{4}', DateTimeLastLogin = '{5}' " +
-                                             "WHERE DomainID LIKE + '{6}'",
+                                             " SET first_Name = '{0}', last_Name = '{1}', email ='{2}'," +
+                                             " username = '{3}', dttm_created = '{4}', dttm_lastlogin = '{5}' " +
+                                             "WHERE sys_id LIKE + '{6}'",
                 u.FirstName, u.LastName, u.Email, u.Username, u.DttmCreated.ToString("yyyy-MM-dd HH:mm:ss"),
                 u.DttmLastLogin.ToString("yyyy-MM-dd HH:mm:ss"), u.Id);
-            // System.Diagnostics.Debug.WriteLine(_cmd.CommandText);
-            var reader = _cmd.ExecuteNonQuery();
+            _cmd.ExecuteNonQuery();
         }
         catch (MySqlException ex)
         {
