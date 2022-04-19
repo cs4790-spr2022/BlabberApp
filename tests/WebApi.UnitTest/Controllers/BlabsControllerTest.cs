@@ -2,6 +2,7 @@ using System.Linq;
 
 using DataStore.Plugins;
 
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -63,5 +64,22 @@ public class BlabsControllerTest
         var a = h.GetById(b.First().Id);
         // Assert
         Assert.AreEqual("Microsoft.AspNetCore.Mvc.OkObjectResult", a.ToString());
+    }
+
+    [TestMethod]
+    public void TestPostAndValidateNoUser()
+    {
+        // Arrange
+        BlabsController blabController = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabDto blabDto = new("foobar", "ipsum");
+
+        UserController userController = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
+        UserDto userDto = new("fubar", "fubar@example.com", "Fu", "Bar");
+
+        userController.Post(userDto);
+        // Act
+        IActionResult actual = blabController.Post(blabDto);
+        // Assert
+        Assert.AreEqual(null, actual);
     }
 }

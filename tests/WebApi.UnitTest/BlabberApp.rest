@@ -1,0 +1,15 @@
+@hostname = localhost
+@port = 7739
+@protocol = http
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+###
+
+GET {{protocol}}://{{host}}/Blabs
+Accept: application/json
+
+###
+
+GET {{protocol}}://{{host}}/User
+Accept: application/json
