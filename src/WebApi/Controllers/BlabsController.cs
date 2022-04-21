@@ -13,11 +13,13 @@ public class BlabsController : ControllerBase
 {
     private readonly ILogger<BlabsController> _logger;
     private readonly IBlabRepository _repo;
+    private readonly IUserRepository _userRepo;
 
-    public BlabsController(ILogger<BlabsController> logger, IBlabRepository repo)
+    public BlabsController(ILogger<BlabsController> logger, IBlabRepository repo, IUserRepository userRepo)
     {
         _logger = logger;
         _repo = repo;
+        _userRepo = userRepo;
     }
 
     [HttpGet(Name = "Blabs")]
@@ -41,14 +43,23 @@ public class BlabsController : ControllerBase
     [HttpPost]
     public IActionResult Post([FromBody] BlabDto? bDto)
     {
+        if (bDto is null)
+        {
+            _logger.LogError("Blab object is null");
+            return BadRequest("Blab object is null");
+        }
+
         try
         {
-            if (bDto is null)
-            {
-                _logger.LogError("Blab object is null");
-                return BadRequest("Blab object is null");
-            }
+            var user = _userRepo.GetByUsername(bDto.Username);
+        }
+        catch (Exception e)
+        {
+            throw new BadHttpRequestException(e.Message);
+        }
 
+        try
+        {
             Blab b = new(bDto.Content, bDto.Username);
 
             _repo.Add(b);

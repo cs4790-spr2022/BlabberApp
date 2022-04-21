@@ -2,6 +2,7 @@ using System.Linq;
 
 using DataStore.Plugins;
 
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -20,9 +21,15 @@ public class BlabsControllerTest
     public void TestInstantiation()
     {
         // Arrange
-        BlabsController e = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabsController e = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            new InMemUserRepository());
         // Act
-        BlabsController a = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabsController a = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            new InMemUserRepository());
         // Assert
         Assert.AreEqual(e.GetType(), a.GetType());
         Assert.IsInstanceOfType(e, typeof(BlabsController));
@@ -32,7 +39,10 @@ public class BlabsControllerTest
     public void TestGetAllEmpty()
     {
         // Arrange
-        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        BlabsController h = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            new InMemUserRepository());
         // Act
         var a = h.GetAll();
         // Assert
@@ -43,10 +53,20 @@ public class BlabsControllerTest
     public void TestPostAndGetAll()
     {
         // Arrange
-        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        var userRepo = new InMemUserRepository();
+        UserController userController = new(new Mock<ILogger<UserController>>().Object, userRepo);
+        UserDto userDto = new("fubar", "fubar@example.com", "Fu", "Bar");
+        userController.Post(userDto);
+
+        BlabsController h = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            userRepo);
         BlabDto d = new("fubar", "ipsum");
+
         // Act
         var a = h.Post(d);
+
         // Assert
         Assert.AreEqual("Microsoft.AspNetCore.Mvc.CreatedAtRouteResult", a.ToString());
         Assert.AreEqual(1, h.GetAll().Count());
@@ -56,7 +76,14 @@ public class BlabsControllerTest
     public void TestPostAndGetById()
     {
         // Arrange
-        BlabsController h = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
+        var userRepo = new InMemUserRepository();
+        UserController userController = new(new Mock<ILogger<UserController>>().Object, userRepo);
+        UserDto userDto = new("fubar", "fubar@example.com", "Fu", "Bar");
+        userController.Post(userDto);
+        BlabsController h = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            userRepo);
         BlabDto d = new("fubar", "ipsum");
         // Act
         h.Post(d);
@@ -67,19 +94,45 @@ public class BlabsControllerTest
     }
 
     [TestMethod]
-    public void TestPostAndValidateNoUser()
+    public void TestPostAndValidateWithValidUser()
     {
         // Arrange
-        BlabsController blabController = new(new Mock<ILogger<BlabsController>>().Object, new InMemBlabRepository());
-        BlabDto blabDto = new("foobar", "ipsum");
-
-        UserController userController = new(new Mock<ILogger<UserController>>().Object, new InMemUserRepository());
+        var userRepo = new InMemUserRepository();
+        UserController userController = new(new Mock<ILogger<UserController>>().Object, userRepo);
         UserDto userDto = new("fubar", "fubar@example.com", "Fu", "Bar");
-
         userController.Post(userDto);
+
+        BlabsController blabController = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            userRepo);
+        BlabDto blab = new("fubar", "ipsum");
+
         // Act
-        IActionResult actual = blabController.Post(blabDto);
+        var actionResult = blabController.Post(blab);
+        var createdResult = actionResult as CreatedAtRouteResult;
+
         // Assert
-        Assert.AreEqual(null, actual);
+        Assert.IsInstanceOfType(actionResult, typeof(ActionResult));
+        Assert.AreEqual(201, createdResult.StatusCode);
+    }
+
+    [TestMethod]
+    public void TestPostAndValidateWithInvalidUser()
+    {
+        // Arrange
+        var userRepo = new InMemUserRepository();
+        UserController userController = new(new Mock<ILogger<UserController>>().Object, userRepo);
+        UserDto userDto = new("fubar", "fubar@example.com", "Fu", "Bar");
+        userController.Post(userDto);
+
+        BlabsController blabController = new(
+            new Mock<ILogger<BlabsController>>().Object,
+            new InMemBlabRepository(),
+            userRepo);
+        BlabDto blab = new("foobar", "ipsum");
+
+        // Act and Assert
+        Assert.ThrowsException<BadHttpRequestException>(() => blabController.Post(blab));
     }
 }

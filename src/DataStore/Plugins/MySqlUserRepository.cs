@@ -65,9 +65,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
         {
             User u = new(reader.GetString(2), reader.GetString(1))
             {
-                Id = new Guid(reader.GetString(0)),
-                FirstName = reader.GetString(3),
-                LastName = reader.GetString(4)
+                Id = new Guid(reader.GetString(0)), FirstName = reader.GetString(3), LastName = reader.GetString(4)
             };
 
             buf.Add(u);
@@ -91,7 +89,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
             var reader = _cmd.ExecuteReader();
             reader.Read();
-            User res = new(reader.GetString(2), reader.GetString(1)) { Id = new Guid(reader.GetString(0)) };
+            User res = new(reader.GetString(2), reader.GetString(1)) {Id = new Guid(reader.GetString(0))};
             reader.Close();
 
             return res;
@@ -217,6 +215,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
     public User GetByUsername(string username)
     {
+        // TODO Refactor code
         try
         {
             _cmd.Connection.Open();
@@ -227,7 +226,7 @@ public class MySqlUserRepository : MySqlPlugin, IUserRepository
 
             if (reader.HasRows == false) return new User("", "");
 
-            User readUser = new User("doesn't", "matter@test.com");
+            User readUser = new("doesn't", "matter@test.com");
             reader.Read();
             readUser.Id = reader.GetGuid(1);
             if (!reader.IsDBNull(2)) readUser.FirstName = reader.GetString(2);

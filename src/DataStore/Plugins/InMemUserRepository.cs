@@ -1,5 +1,5 @@
-using Domain.Entities;
 using Domain.Common.Interfaces;
+using Domain.Entities;
 
 namespace DataStore.Plugins;
 
@@ -63,6 +63,11 @@ public class InMemUserRepository : IUserRepository
 
     public User GetByUsername(string username)
     {
-        throw new NotImplementedException();
+        foreach (User user in _buf)
+        {
+            if (username == user.Username) return user;
+        }
+
+        throw new Exception("Not found");
     }
 }
