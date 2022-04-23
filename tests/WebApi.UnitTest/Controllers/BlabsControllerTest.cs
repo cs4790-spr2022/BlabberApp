@@ -114,7 +114,7 @@ public class BlabsControllerTest
 
         // Assert
         Assert.IsInstanceOfType(actionResult, typeof(ActionResult));
-        Assert.AreEqual(201, createdResult.StatusCode);
+        Assert.AreEqual(201, createdResult?.StatusCode);
     }
 
     [TestMethod]
