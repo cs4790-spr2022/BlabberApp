@@ -64,7 +64,7 @@ public class BlabsController : ControllerBase
 
             _repo.Add(b);
 
-            return CreatedAtRoute("Blabs", new {id = b.Id}, b);
+            return CreatedAtRoute("Blabs", new { id = b.Id }, b);
         }
         catch (Exception ex)
         {
