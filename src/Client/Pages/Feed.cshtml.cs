@@ -28,7 +28,7 @@ public class FeedModel : PageModel
     public void OnPost()
     {
         Blab b = new(Message, Username) {DttmCreated = DateTime.Now, DttmModified = DateTime.Now};
-        // b.Validate();
+        b.Validate();
         _repo.Add(b);
     }
 }
